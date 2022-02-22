@@ -1,55 +1,43 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
 public class PlayerMovement : MonoBehaviour
-{
-    [SerializeField] 
-    private int _speed = 3; 
-    Rigidbody2D rb2d;
-    [SerializeField] 
-    private float _jumpforce = 5.0f;
-    [SerializeField]
-    private int jumps = 2;
-    
-    
-    
-    // Start is called before the first frame update
+{ 
+    [SerializeField] private int _speed = 3;
+    private bool Direction = true;
+    private Rigidbody2D Rb2d = null;
+    [SerializeField] private float _jumpforce = 5.0f;
+    [SerializeField] private int jumps = 2;
     void Start()
     {
-        rb2d = GetComponent<Rigidbody2D>();
+        Rb2d = GetComponent<Rigidbody2D>();
     }
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKey(KeyCode.A))
         {
-            ControllerPlayerLeft();
+            Direction = true;
+            PlayerController(Direction, _speed);
         }
-
         if (Input.GetKey(KeyCode.D))
         {
-            ControllerPlayerRight();
+            Direction = false;
+            PlayerController(Direction, _speed);
         }
-
         if (Input.GetKeyDown(KeyCode.Space))
         {
-             Jump_DoubleJump();
+            Jump_DoubleJump();
         }
-
     }
-
-    void ControllerPlayerLeft()
+    void PlayerController( bool dirX, int speed)
     {
-        transform.position = transform.position + new Vector3(-(_speed) * Time.deltaTime, 0, 0);
+        if (dirX)
+        {
+            transform.position = transform.position + new Vector3(-(speed)*Time.deltaTime,0,0); 
+        }
+        else
+        {
+            transform.position = transform.position +new Vector3(speed*Time.deltaTime,0,0); 
+        }
     }
-    void ControllerPlayerRight()
-    {
-        transform.position = transform.position + new Vector3(_speed*Time.deltaTime,0,0);
-    }
-
     void Jump_DoubleJump()
     {
         if (jumps > 0)
@@ -57,14 +45,8 @@ public class PlayerMovement : MonoBehaviour
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, _jumpforce), ForceMode2D.Impulse);
             jumps--;
         }
-
-        if (jumps == 0)
-        {
-            return;
-        }
-
+        if (jumps == 0) return; 
     }
-
     private void OnCollisionEnter2D(Collision2D collider)
     {
         if (collider.gameObject.tag =="Floor")
@@ -73,3 +55,4 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 }
+
