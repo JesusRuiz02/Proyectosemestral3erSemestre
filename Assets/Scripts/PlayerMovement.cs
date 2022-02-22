@@ -40,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
         { 
              transform.position = transform.position +new Vector3(speed * Time.deltaTime, 0, 0); 
         }
+        
     }
     
    private void DoubleJump()
