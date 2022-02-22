@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3747632-0b1d-438b-a0dd-6f81d5b2f797" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" afterDir="false" />
-    </list>
+    <list default="true" id="a3747632-0b1d-438b-a0dd-6f81d5b2f797" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +15,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/DashMove.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
     </changedPaths>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="25RYeGbrdxQ6RKexhCHZ3YqUCW7" />
   <component name="ProjectViewState">
@@ -33,6 +34,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="rider.run.widget.enabled.cache" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -68,12 +70,14 @@
       <workItem from="1645491470143" duration="2000" />
       <workItem from="1645491496074" duration="3127000" />
       <workItem from="1645494726746" duration="1777000" />
+      <workItem from="1645537159383" duration="5373000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="Vcs.Log.Tabs.Properties">
@@ -86,7 +90,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
