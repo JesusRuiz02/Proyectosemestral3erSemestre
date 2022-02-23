@@ -34,11 +34,12 @@ public class PlayerMovement : MonoBehaviour
     {
         if (_moveRight)
         {
-            transform.position = transform.position + new Vector3(-speed * Time.deltaTime, 0, 0); 
+            _rigidbody2D.AddForce(Vector2.left * speed);
+            
         }
         else
-        { 
-             transform.position = transform.position +new Vector3(speed * Time.deltaTime, 0, 0); 
+        {
+            _rigidbody2D.AddForce(Vector2.right * speed);
         }
         
     }
