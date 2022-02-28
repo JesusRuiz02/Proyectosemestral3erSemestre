@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 public class Dash : MonoBehaviour
 {
-    [SerializeField] private float interval = .5f;
+    [SerializeField] private float interval = .01f;
     [SerializeField] private int numberofsteps = 10;
     void Update()
     {
@@ -16,11 +16,11 @@ public class Dash : MonoBehaviour
     {
         var PosActual = transform.position.x;
         var destino = PosActual + 1f;
-        var steps = (destino-PosActual / interval);
-        for(int i = 0; i < numberofsteps; i++)
+        var step = (destino-PosActual) / numberofsteps;
+        for(int i = 1; i <= numberofsteps; i++)
         {
-            transform.position += Vector3.right * steps;
-            yield return new WaitForSeconds(.02f);
+            transform.position += Vector3.right * step;
+            yield return new WaitForSeconds(interval);
         }
     }
 }
