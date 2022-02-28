@@ -1,8 +1,8 @@
 using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
-    private const string FLOOR = "Floor";
-    private const string MFLOOR = "Mfloor";
+    private const string FLOORTAG = "Floor";
+    private const string MFLOORTAG = "Mfloor";
     
     [SerializeField] private int _speed = 3;
     private Rigidbody2D _rigidbody2D = null;
@@ -56,11 +56,10 @@ public class PlayerMovement : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D collider)
     {
-        if (collider.gameObject.tag == FLOOR || collider.gameObject.tag == MFLOOR)
+        if (collider.gameObject.tag == FLOORTAG || collider.gameObject.tag == MFLOORTAG)
         {
             _jumps = _basejumps;
         }
-        
     }
 }
 

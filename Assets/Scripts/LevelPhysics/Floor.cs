@@ -4,7 +4,7 @@ public class Floor : MonoBehaviour
 {
    [SerializeField] private float _speed = 1.5f;
    
-   private const string FLOOR = "Floor";
+   private const string FLOORTAG = "Floor";
    
     private bool _dir = true;
     
@@ -20,7 +20,7 @@ public class Floor : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D colliders)
     {
-        if (colliders.gameObject.tag == FLOOR)
+        if (colliders.gameObject.tag == FLOORTAG)
         {
             _dir = !_dir;
         };
