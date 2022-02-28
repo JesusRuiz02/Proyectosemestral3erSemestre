@@ -1,7 +1,8 @@
 using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
-    private const string FLOOR = "Floor";
+    private const string FLOORTAG = "Floor";
+    private const string MFLOORTAG = "Mfloor";
     
     [SerializeField] private int _speed = 3;
     private Rigidbody2D _rigidbody2D = null;
@@ -34,13 +35,13 @@ public class PlayerMovement : MonoBehaviour
     {
         if (_moveRight)
         {
-            transform.position = transform.position + new Vector3(-speed * Time.deltaTime, 0, 0); 
+            _rigidbody2D.AddForce(Vector2.left * speed, ForceMode2D.Force);
+            
         }
         else
-        { 
-             transform.position = transform.position +new Vector3(speed * Time.deltaTime, 0, 0); 
+        {
+            _rigidbody2D.AddForce(Vector2.right * speed, ForceMode2D.Force);
         }
-        
     }
     
    private void DoubleJump()
@@ -55,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D collider)
     {
-        if (collider.gameObject.tag == FLOOR)
+        if (collider.gameObject.tag == FLOORTAG || collider.gameObject.tag == MFLOORTAG)
         {
             _jumps = _basejumps;
         }
