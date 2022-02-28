@@ -15,7 +15,7 @@ public class Dash : MonoBehaviour
     IEnumerator Dashfunction()
     {
         var PosActual = transform.position.x;
-        var destino = PosActual + 1f;
+        var destino = PosActual + 3f;
         var step = (destino-PosActual) / numberofsteps;
         for(int i = 1; i <= numberofsteps; i++)
         {
