@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a3747632-0b1d-438b-a0dd-6f81d5b2f797" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyectosemestral3erSemestre/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyectosemestral3erSemestre/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +14,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../../../ProyectoSemestralBueno/Proyectosemestral/Assets/Scripts/Enemy/EnemyAiPath.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/MagicBullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelPhysics/Floor.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -24,6 +27,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelPhysics/Floor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelPhysics/RotationWheel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/FairyArcher.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/MagicBullet.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="25RYeGbrdxQ6RKexhCHZ3YqUCW7" />
@@ -80,6 +85,7 @@
       <workItem from="1645716961091" duration="730000" />
       <workItem from="1645919719545" duration="8782000" />
       <workItem from="1646056267659" duration="3337000" />
+      <workItem from="1646100221358" duration="2991000" />
     </task>
     <servers />
   </component>
