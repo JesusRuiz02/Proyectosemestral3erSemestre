@@ -18,7 +18,7 @@ public class MagicBullet : MonoBehaviour
 
     private void EndOfTheBullet( float limit)
     {
-        if (transform.position.x >= 13)
+        if (transform.position.x >= limit)
         {
            Destroy(gameObject); 
         }
