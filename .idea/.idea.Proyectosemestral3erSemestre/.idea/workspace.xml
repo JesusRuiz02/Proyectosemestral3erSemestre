@@ -17,6 +17,7 @@
     <setting file="file://$PROJECT_DIR$/../../../ProyectoSemestralBueno/Proyectosemestral/Assets/Scripts/Enemy/EnemyAiPath.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/MagicBullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelPhysics/Floor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/ChaningCamera.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -29,6 +30,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelPhysics/RotationWheel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/FairyArcher.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/MagicBullet.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Camera/ChaningCamera.cs" />
     </changedPaths>
   </component>
   <component name="MarkdownSettingsMigration">
@@ -90,6 +92,7 @@
       <workItem from="1645919719545" duration="8782000" />
       <workItem from="1646056267659" duration="3337000" />
       <workItem from="1646100221358" duration="2991000" />
+      <workItem from="1646180304321" duration="3330000" />
     </task>
     <servers />
   </component>
@@ -109,6 +112,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
