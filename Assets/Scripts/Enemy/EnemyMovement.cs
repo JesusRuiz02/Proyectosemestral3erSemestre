@@ -3,21 +3,22 @@ using UnityEngine.Serialization;
 
 public class EnemyMovement : MonoBehaviour
 {
-    private float _speed = default;
-    private Rigidbody2D _rigidbody2D;
     
+    [SerializeField] private float _speed = default;
+    private Rigidbody2D _rigidbody2D;
     [SerializeField] private bool _isStatic = default;
     [SerializeField] private bool _isWalker = default;
     [SerializeField] private bool _walksRight = default;
-    
-    [SerializeField] private Transform _wallCheck, _pitCheck, _groundCheck;
-    [SerializeField] private bool _wallDetected, _pitDetected;
+    [SerializeField] private bool _wallDetected;
+    [SerializeField] private bool _pitDetected;
     [FormerlySerializedAs("_groundDetected")] [SerializeField] private bool _isGrounded;
     [SerializeField] private float _detectionRadius = default;
     [SerializeField] private LayerMask _whatIsGround;
+    [SerializeField] private Transform _wallCheck, _pitCheck, _groundCheck;
+    
     void Start()    
     {
-        _speed = GetComponent<Enemy>()._speed;
+        _speed = GetComponent<Enemy>().Speed;
         _rigidbody2D = GetComponent<Rigidbody2D>();
     }
     
