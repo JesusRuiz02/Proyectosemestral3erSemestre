@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a3747632-0b1d-438b-a0dd-6f81d5b2f797" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyHealth.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,10 +37,10 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spell.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/Weapon.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/MagicBullet.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyHealth.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
     </changedPaths>
   </component>
