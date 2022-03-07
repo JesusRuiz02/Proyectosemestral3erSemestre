@@ -200,7 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyName: FairyEneny
   _healtpoints: 50
-  _speed: 25
+  _speed: 200
   _damageTogive: 10
 --- !u!212 &6115528
 SpriteRenderer:
@@ -287,8 +287,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Offset: {x: -0.009988785, y: -0.000000059604645}
+  m_Size: {x: 0.8801384, y: 1.840181}
   m_Direction: 0
 --- !u!1 &66842651
 GameObject:
@@ -1286,7 +1286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 3
-  _jumpforce: 11
+  _jumpforce: 8
   _jumps: 2
   _basejumps: 2
 --- !u!114 &1057993847
