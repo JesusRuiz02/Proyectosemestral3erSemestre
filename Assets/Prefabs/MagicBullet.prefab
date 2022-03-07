@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 7954630197889665403}
   - component: {fileID: 4352356721474416239}
   - component: {fileID: 7377737258915340006}
+  - component: {fileID: -6852796569246127479}
   m_Layer: 0
   m_Name: MagicBullet
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9885299, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -136,3 +137,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 3
   _limitdistance: 9
+--- !u!114 &-6852796569246127479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6172932768946965047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4bfb5ab63a4685488b2e3d922ea7899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyName: MagicArrow
+  _healtpoints: 500
+  _speed: 0
+  _damageTogive: 1
