@@ -9,7 +9,6 @@ public class Aim : MonoBehaviour
         cam = Camera.main;
     }
 
-
     void Update()
     {
         Vector2 dir = Input.mousePosition - cam.WorldToScreenPoint(transform.position);
