@@ -13,7 +13,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if (collider.CompareTag("Weapon"))
         {
-            _enemy._healtpoints -= -3f;
+            _enemy._healtpoints  -= 3f;
         }
 
         if (_enemy._healtpoints <= 0)
