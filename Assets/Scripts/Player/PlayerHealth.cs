@@ -34,7 +34,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (collider.CompareTag("Enemy") && !_isInmune)
         {
-            _currentHealth -= collider.GetComponent<Enemy>()._damageTogive;
+            _currentHealth -= collider.GetComponent<Enemy>()._damageToGive;
             StartCoroutine(Inmunity( 2, _blinkingtime));
             
             if (collider.transform.position.x > transform.position.x)
@@ -46,7 +46,7 @@ public class PlayerHealth : MonoBehaviour
                 _rigidbody2D.AddForce(new Vector2(_knockbackForceX,_knockbackForceY), ForceMode2D.Force);
             }
             
-            if (_currentHealth<=0)
+            if (_currentHealth <= 0)
             {
                 Destroy(gameObject);
             }
@@ -64,8 +64,5 @@ public class PlayerHealth : MonoBehaviour
         }
         _sprite.enabled = true;
         _isInmune = false;
-        
-       
-
     }
 }

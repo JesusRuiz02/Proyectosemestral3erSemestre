@@ -5,7 +5,7 @@ public class Weapon : MonoBehaviour
 {
     [SerializeField] private Transform _firepoint = default;
     [SerializeField] private GameObject _playerbullet = default;
-    [SerializeField] private float _bulletdamage = 5;
+    public float _bulletdamage = 5;
 
     void Update()
     {
