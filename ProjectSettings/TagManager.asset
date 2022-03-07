@@ -7,6 +7,7 @@ TagManager:
   - Floor
   - Enemy
   - Mfloor
+  - Weapon
   layers:
   - Default
   - TransparentFX
