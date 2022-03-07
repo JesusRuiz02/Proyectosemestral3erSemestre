@@ -174,12 +174,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00eaf926a933e9f43b0744735c3f10b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _speed: 0
   _isStatic: 0
   _isWalker: 1
   _walksRight: 0
-  _wallCheck: {fileID: 2145503155}
-  _pitCheck: {fileID: 75509808}
-  _groundCheck: {fileID: 1001111501}
   _wallDetected: 0
   _pitDetected: 0
   _isGrounded: 0
@@ -187,6 +185,9 @@ MonoBehaviour:
   _whatIsGround:
     serializedVersion: 2
     m_Bits: 8
+  _wallCheck: {fileID: 2145503155}
+  _pitCheck: {fileID: 75509808}
+  _groundCheck: {fileID: 1001111501}
 --- !u!114 &6115527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,9 +201,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyName: FairyEneny
-  _healtpoints: 300
+  _healthPoints: 210
   _speed: 200
-  _damageTogive: 5
+  _damageToGive: 0
 --- !u!212 &6115528
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -997,9 +998,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyName: Archer
-  _healtpoints: 30
+  _healthPoints: 0
   _speed: 2
-  _damageTogive: 0
+  _damageToGive: 0
 --- !u!1 &729042877
 GameObject:
   m_ObjectHideFlags: 0
@@ -1626,7 +1627,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _firepoint: {fileID: 1057993843}
   _playerbullet: {fileID: 6788087464968464565, guid: cc7226686dab2e249aa633ea93028951, type: 3}
-  _bulletdamage: 5
 --- !u!1 &1150555353
 GameObject:
   m_ObjectHideFlags: 0

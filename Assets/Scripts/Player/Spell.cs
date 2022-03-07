@@ -4,7 +4,7 @@ public class Spell : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D _rigidbody2D;
     [SerializeField] private float _speed = 20;
-
+    public float _bulletdamage = 5;
     void Start()
     {
         _rigidbody2D.velocity = Vector2.right * _speed;
