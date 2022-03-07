@@ -441,8 +441,8 @@ GameObject:
   - component: {fileID: 479365965}
   - component: {fileID: 479365967}
   m_Layer: 3
-  m_Name: Square
-  m_TagString: Untagged
+  m_Name: Wall
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -910,7 +910,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _camera: {fileID: 519420031}
-  _positioncamera: {x: 18, y: 5, z: -10}
+  _positioncamera: {x: 19, y: 5, z: -10}
 --- !u!61 &729042879
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1282,6 +1282,7 @@ GameObject:
   - component: {fileID: 1057993847}
   - component: {fileID: 1057993849}
   - component: {fileID: 1057993850}
+  - component: {fileID: 1057993851}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1417,6 +1418,7 @@ MonoBehaviour:
   _jumpforce: 8
   _jumps: 2
   _basejumps: 2
+  _movright: 0
 --- !u!114 &1057993847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1489,6 +1491,20 @@ MonoBehaviour:
   _sprite: {fileID: 0}
   _knockbackForceX: 500
   _knockbackForceY: 300
+--- !u!114 &1057993851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057993841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911bc401eba1f7f4bbd1f595c8dd6b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _firepoint: {fileID: 1057993843}
+  _playerbullet: {fileID: 6788087464968464565, guid: cc7226686dab2e249aa633ea93028951, type: 3}
 --- !u!1 &1150555353
 GameObject:
   m_ObjectHideFlags: 0
