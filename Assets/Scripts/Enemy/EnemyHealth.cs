@@ -13,10 +13,10 @@ public class EnemyHealth : MonoBehaviour
     {
         if (collider.CompareTag("Weapon"))
         {
-            _enemy._healthPoints -= collider.GetComponent<Spell>()._bulletdamage;
+            _enemy.ReduceHealth(collider.GetComponent<Spell>()._bulletdamage);  
         }
 
-        if (_enemy._healthPoints <= 0)
+        if (_enemy.Health <= 0)
         {
             Destroy(gameObject);
         }
