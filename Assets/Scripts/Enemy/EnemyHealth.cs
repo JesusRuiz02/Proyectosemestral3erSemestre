@@ -3,7 +3,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
      Enemy _enemy = default;
-
+     
      private void Start()
     {
         _enemy = GetComponent<Enemy>();

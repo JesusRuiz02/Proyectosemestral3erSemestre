@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -13,7 +12,6 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private float _knockbackForceX = 50;
     [SerializeField] private float _knockbackForceY = 10;
     private Rigidbody2D _rigidbody2D;
-    
     
     void Start()
     {
@@ -34,7 +32,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (collider.CompareTag("Enemy") && !_isInmune)
         {
-            _currentHealth -= collider.GetComponent<Enemy>()._damageToGive;
+            _currentHealth -= collider.GetComponent<Enemy>().DamageToGive;
             StartCoroutine(Inmunity( 2, _blinkingtime));
             
             if (collider.transform.position.x > transform.position.x)

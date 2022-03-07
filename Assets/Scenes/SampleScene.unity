@@ -203,7 +203,7 @@ MonoBehaviour:
   _enemyName: FairyEneny
   _healthPoints: 210
   _speed: 200
-  _damageToGive: 0
+  _damageToGive: 10
 --- !u!212 &6115528
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1000,7 +1000,7 @@ MonoBehaviour:
   _enemyName: Archer
   _healthPoints: 0
   _speed: 2
-  _damageToGive: 0
+  _damageToGive: 2
 --- !u!1 &729042877
 GameObject:
   m_ObjectHideFlags: 0

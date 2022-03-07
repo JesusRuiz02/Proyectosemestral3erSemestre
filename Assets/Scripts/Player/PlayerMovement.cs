@@ -61,7 +61,5 @@ public class PlayerMovement : MonoBehaviour
             _jumps = _basejumps;
         }
     }
-
-    
 }
 
