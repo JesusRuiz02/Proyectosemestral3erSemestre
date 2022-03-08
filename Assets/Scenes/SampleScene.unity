@@ -414,6 +414,7 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &955609090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -430,6 +431,8 @@ MonoBehaviour:
   fireRate: 0.5
 --- !u!1 &1368346654
 =======
+=======
+>>>>>>> parent of bafc816 (Merge pull request #27 from JesusRuiz02/Enemyhealth)
 --- !u!1 &479365964
 >>>>>>> parent of bafc816 (Merge pull request #27 from JesusRuiz02/Enemyhealth)
 GameObject:
@@ -449,6 +452,9 @@ GameObject:
   - component: {fileID: 479365965}
   - component: {fileID: 479365967}
   m_Layer: 3
+<<<<<<< HEAD
+>>>>>>> parent of bafc816 (Merge pull request #27 from JesusRuiz02/Enemyhealth)
+=======
 >>>>>>> parent of bafc816 (Merge pull request #27 from JesusRuiz02/Enemyhealth)
   m_Name: Square
   m_TagString: Untagged
