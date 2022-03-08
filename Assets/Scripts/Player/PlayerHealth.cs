@@ -34,7 +34,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (collider.CompareTag("Enemy") && !_isInmune)
         {
-            _currentHealth -= collider.GetComponent<Enemy>()._damageTogive;
+            _currentHealth -= collider.GetComponent<Enemy>().DamageToGive;
             StartCoroutine(Inmunity( 2, _blinkingtime));
             
             if (collider.transform.position.x > transform.position.x)

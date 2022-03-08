@@ -174,10 +174,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00eaf926a933e9f43b0744735c3f10b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 0
   _isStatic: 0
   _isWalker: 1
   _walksRight: 0
+  _wallCheck: {fileID: 2145503155}
+  _pitCheck: {fileID: 75509808}
+  _groundCheck: {fileID: 1001111501}
   _wallDetected: 0
   _pitDetected: 0
   _isGrounded: 0
@@ -185,9 +187,6 @@ MonoBehaviour:
   _whatIsGround:
     serializedVersion: 2
     m_Bits: 8
-  _wallCheck: {fileID: 2145503155}
-  _pitCheck: {fileID: 75509808}
-  _groundCheck: {fileID: 1001111501}
 --- !u!114 &6115527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,10 +199,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4bfb5ab63a4685488b2e3d922ea7899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyName: FairyEneny
-  _healthPoints: 210
+  _healthPoints: 30
   _speed: 200
-  _damageToGive: 10
+  _damageToGive: 0
 --- !u!212 &6115528
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -550,7 +548,7 @@ Transform:
   m_LocalScale: {x: 1, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &479365964
 GameObject:
@@ -633,7 +631,7 @@ Transform:
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &479365967
 BoxCollider2D:
@@ -831,7 +829,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 5.7064276
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1028,10 +1026,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4bfb5ab63a4685488b2e3d922ea7899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyName: Archer
   _healthPoints: 0
   _speed: 2
-  _damageToGive: 2
+  _damageToGive: 0
 --- !u!1 &729042877
 GameObject:
   m_ObjectHideFlags: 0
@@ -1547,7 +1544,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 2
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -1657,7 +1654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _firepoint: {fileID: 1057993843}
-  _playerbullet: {fileID: 6788087464968464565, guid: cc7226686dab2e249aa633ea93028951, type: 3}
+  _playerbullet: {fileID: 7177031715452126462, guid: b03e79bd69cf0564dae35b164e80776a, type: 3}
 --- !u!1 &1150555353
 GameObject:
   m_ObjectHideFlags: 0
@@ -1738,7 +1735,7 @@ Transform:
   m_LocalScale: {x: 20, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1274314353
 GameObject:
@@ -1988,7 +1985,7 @@ Transform:
   - {fileID: 660795780}
   - {fileID: 6115525}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1420965564
 GameObject:
@@ -2167,6 +2164,7 @@ Transform:
   - {fileID: 66842652}
   - {fileID: 1303676659}
   - {fileID: 1420965565}
+  - {fileID: 2058177650}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2629,13 +2627,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058177649}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.32334918, y: -1.2178377, z: -15.047024}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.2794404, y: 0.56125605, z: -14.751829}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 887434634}
   - {fileID: 729042881}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1532976737}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2143739068

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-     Enemy _enemy;
+    Enemy _enemy = default;
 
     private void Start()
     {
@@ -13,10 +13,10 @@ public class EnemyHealth : MonoBehaviour
     {
         if (collider.CompareTag("Weapon"))
         {
-            _enemy._healtpoints -= -3f;
+            _enemy.ReduceHealth(collider.GetComponent<Spell>()._bulletdamage);
         }
 
-        if (_enemy._healtpoints <= 0)
+        if (_enemy.Health <= 0)
         {
             Destroy(gameObject);
         }

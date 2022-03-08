@@ -17,7 +17,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private LayerMask _whatIsGround;
     void Start()    
     {
-        _speed = GetComponent<Enemy>()._speed;
+        _speed = GetComponent<Enemy>().Speed;
         _rigidbody2D = GetComponent<Rigidbody2D>();
     }
     
