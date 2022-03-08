@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -12,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private float _knockbackForceX = 50;
     [SerializeField] private float _knockbackForceY = 10;
     private Rigidbody2D _rigidbody2D;
+    
     
     void Start()
     {
@@ -32,7 +34,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (collider.CompareTag("Enemy") && !_isInmune)
         {
-            _currentHealth -= collider.GetComponent<Enemy>().DamageToGive;
+            _currentHealth -= collider.GetComponent<Enemy>()._damageTogive;
             StartCoroutine(Inmunity( 2, _blinkingtime));
             
             if (collider.transform.position.x > transform.position.x)
@@ -44,7 +46,7 @@ public class PlayerHealth : MonoBehaviour
                 _rigidbody2D.AddForce(new Vector2(_knockbackForceX,_knockbackForceY), ForceMode2D.Force);
             }
             
-            if (_currentHealth <= 0)
+            if (_currentHealth<=0)
             {
                 Destroy(gameObject);
             }
@@ -62,5 +64,8 @@ public class PlayerHealth : MonoBehaviour
         }
         _sprite.enabled = true;
         _isInmune = false;
+        
+       
+
     }
 }

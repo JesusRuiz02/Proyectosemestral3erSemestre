@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3747632-0b1d-438b-a0dd-6f81d5b2f797" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyectosemestral3erSemestre/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyectosemestral3erSemestre/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MagicBullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MagicBullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/MagicBullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/MagicBullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Gun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Gun.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,8 +20,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../../../ProyectoSemestralBueno/Proyectosemestral/Assets/Scripts/Enemy/EnemyAiPath.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Spell.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Gun.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyHealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
@@ -29,19 +34,17 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RotationWheel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelPhysics/Floor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelPhysics/RotationWheel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/FairyArcher.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Camera/ChaningCamera.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Camera/RoomCameraController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/Gun.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spell.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/Weapon.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/MagicBullet.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyHealth.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/MagicBullet.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/Gun.cs" />
     </changedPaths>
   </component>
   <component name="MarkdownSettingsMigration">
@@ -107,7 +110,6 @@
       <workItem from="1646237208648" duration="148000" />
       <workItem from="1646511536314" duration="4152000" />
       <workItem from="1646612066196" duration="688000" />
-      <workItem from="1646659459526" duration="2324000" />
     </task>
     <servers />
   </component>
