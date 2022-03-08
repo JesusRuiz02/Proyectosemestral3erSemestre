@@ -1,3 +1,4 @@
+using Unity.Mathematics;
 using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _jumpforce = 5.0f;
     [SerializeField] private int _jumps = 2;
     [SerializeField] private int _basejumps = 2;
-    
+
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -31,12 +32,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     
-    private void PlayerController( bool _moveRight, int speed)
+    public void PlayerController( bool _moveRight, int speed)
     {
         if (_moveRight)
         {
             _rigidbody2D.AddForce(Vector2.left * speed, ForceMode2D.Force);
-            
         }
         else
         {
