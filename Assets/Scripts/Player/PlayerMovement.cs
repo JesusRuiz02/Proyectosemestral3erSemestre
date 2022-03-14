@@ -1,12 +1,15 @@
+using System;
 using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private const string FLOORTAG = "Floor";
     private const string MFLOORTAG = "Mfloor";
-    
-    [SerializeField] private int _speed = 3;
+    private bool _facingRight = true;
+    private float _velX = default;
+    [SerializeField] private float _speed = 3;
+    private float _velY = default;
+    [SerializeField] private float _jumpHeight = default;
     private Rigidbody2D _rigidbody2D = null;
-    [SerializeField] private float _jumpforce = 5.0f;
     [SerializeField] private int _jumps = 2;
     [SerializeField] private int _basejumps = 2;
     
@@ -17,42 +20,39 @@ public class PlayerMovement : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKey(KeyCode.A))
-        {
-            PlayerController(true, _speed);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            PlayerController(false, _speed);
-        }
+        DirectionCharacter();
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            DoubleJump();
+            DoubleJump();  
         }
     }
-    
-    private void PlayerController( bool _moveRight, int speed)
+
+    private void FixedUpdate()
     {
-        if (_moveRight)
+        Movement();
+    }
+
+    private void DirectionCharacter()
+    {
+        if (_rigidbody2D.velocity.x > 0 && !_facingRight)
         {
-            _rigidbody2D.AddForce(Vector2.left * speed, ForceMode2D.Force);
-            
+            Flip();
         }
-        else
+        if (_rigidbody2D.velocity.x < 0 && _facingRight)
         {
-            _rigidbody2D.AddForce(Vector2.right * speed, ForceMode2D.Force);
+            Flip();
         }
     }
+  
     
    private void DoubleJump()
-   
-    {
-        if (_jumps > 0)
-        {
-            _rigidbody2D.AddForce(Vector2.up * _jumpforce, ForceMode2D.Impulse);
-            _jumps--;
-        }
-    }
+   {
+       if (_jumps > 0)
+       {
+           _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, _jumpHeight);
+           _jumps--;
+       }
+   }
     
     private void OnCollisionEnter2D(Collision2D collider)
     {
@@ -60,6 +60,19 @@ public class PlayerMovement : MonoBehaviour
         {
             _jumps = _basejumps;
         }
+    }
+
+    private void Movement()
+    {
+        _velX = Input.GetAxis("Horizontal");
+        _velY = _rigidbody2D.velocity.y;
+        _rigidbody2D.velocity = new Vector2(_velX * _speed, _velY);
+    }
+
+    private void Flip()
+    {
+        _facingRight = !_facingRight;
+        transform.Rotate(0f,180f,0f);
     }
 }
 
