@@ -7,7 +7,7 @@ public class Spell : MonoBehaviour
     public float _bulletdamage = 5;
     void Start()
     {
-        _rigidbody2D.velocity = Vector2.right * _speed;
+        _rigidbody2D.velocity = transform.right * _speed;
     }
 
     private void OnTriggerEnter2D(Collider2D collider)

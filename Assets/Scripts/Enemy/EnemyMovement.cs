@@ -1,24 +1,31 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 public class EnemyMovement : MonoBehaviour
 {
     private float _speed = default;
+    [SerializeField] private float _actualspeed = default;
     private Rigidbody2D _rigidbody2D;
-    
+    [SerializeField] private float _boost = default;
     [SerializeField] private bool _isStatic = default;
     [SerializeField] private bool _isWalker = default;
     [SerializeField] private bool _walksRight = default;
-    
     [SerializeField] private Transform _wallCheck, _pitCheck, _groundCheck;
     [SerializeField] private bool _wallDetected, _pitDetected;
     [FormerlySerializedAs("_groundDetected")] [SerializeField] private bool _isGrounded;
     [SerializeField] private float _detectionRadius = default;
     [SerializeField] private LayerMask _whatIsGround;
+
+    public bool WalksRight => _walksRight;
+    
     void Start()    
     {
+        
         _speed = GetComponent<Enemy>().Speed;
+        _boost = GetComponent<Enemy>().Boost;
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _actualspeed = _speed;
     }
     
     void Update()
@@ -44,13 +51,23 @@ public class EnemyMovement : MonoBehaviour
             _rigidbody2D.constraints = RigidbodyConstraints2D.FreezeRotation;
             if (!_walksRight)
             {
-                _rigidbody2D.velocity = new Vector2(-_speed * Time.deltaTime, _rigidbody2D.velocity.y);
+                _rigidbody2D.velocity = new Vector2(-_actualspeed * Time.deltaTime, _rigidbody2D.velocity.y);
             }
             else
             {
-                _rigidbody2D.velocity = new Vector2(_speed * Time.deltaTime, _rigidbody2D.velocity.y);
+                _rigidbody2D.velocity = new Vector2(_actualspeed * Time.deltaTime, _rigidbody2D.velocity.y);
             }  
         }
+    }
+
+    public void FastToSpeed()
+    {
+        _actualspeed = _boost;
+    }
+
+    public void BackToSpeed()
+    {
+        _actualspeed = _speed;
     }
 
     private void Flip()

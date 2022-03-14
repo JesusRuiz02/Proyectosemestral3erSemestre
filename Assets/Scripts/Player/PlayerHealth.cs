@@ -64,8 +64,5 @@ public class PlayerHealth : MonoBehaviour
         }
         _sprite.enabled = true;
         _isInmune = false;
-        
-       
-
     }
 }
