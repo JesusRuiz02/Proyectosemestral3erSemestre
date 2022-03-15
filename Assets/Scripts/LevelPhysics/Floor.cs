@@ -24,7 +24,5 @@ public class Floor : MonoBehaviour
         {
             _dir = !_dir;
         }
-
-        ;
     }
 }

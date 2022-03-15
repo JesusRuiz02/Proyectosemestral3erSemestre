@@ -14,7 +14,6 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private float _knockbackForceY = 10;
     private Rigidbody2D _rigidbody2D;
 
-
     void Start()
     {
         _sprite = GetComponent<SpriteRenderer>();

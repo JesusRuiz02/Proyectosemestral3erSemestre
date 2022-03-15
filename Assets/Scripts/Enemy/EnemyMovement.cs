@@ -5,7 +5,7 @@ using UnityEngine.Serialization;
 public class EnemyMovement : MonoBehaviour
 {
     private float _speed = default;
-    [SerializeField] private float _actualspeed = default;
+    [SerializeField] private float _actualSpeed = default;
     private Rigidbody2D _rigidbody2D;
     [SerializeField] private float _boost = default;
     [SerializeField] private bool _isStatic = default;
@@ -27,7 +27,7 @@ public class EnemyMovement : MonoBehaviour
         _speed = GetComponent<Enemy>().Speed;
         _boost = GetComponent<Enemy>().Boost;
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        _actualspeed = _speed;
+        _actualSpeed = _speed;
     }
 
     void Update()
@@ -53,23 +53,23 @@ public class EnemyMovement : MonoBehaviour
             _rigidbody2D.constraints = RigidbodyConstraints2D.FreezeRotation;
             if (!_walksRight)
             {
-                _rigidbody2D.velocity = new Vector2(-_actualspeed * Time.deltaTime, _rigidbody2D.velocity.y);
+                _rigidbody2D.velocity = new Vector2(-_actualSpeed * Time.deltaTime, _rigidbody2D.velocity.y);
             }
             else
             {
-                _rigidbody2D.velocity = new Vector2(_actualspeed * Time.deltaTime, _rigidbody2D.velocity.y);
+                _rigidbody2D.velocity = new Vector2(_actualSpeed * Time.deltaTime, _rigidbody2D.velocity.y);
             }
         }
     }
 
     public void FastToSpeed()
     {
-        _actualspeed = _boost;
+        _actualSpeed = _boost;
     }
 
     public void BackToSpeed()
     {
-        _actualspeed = _speed;
+        _actualSpeed = _speed;
     }
 
     private void Flip()
