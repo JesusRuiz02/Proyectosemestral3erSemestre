@@ -29,7 +29,6 @@ public class MagicBullet : MonoBehaviour
     {
         if (collider.CompareTag("Player"))
         {
-           
             Destroy(gameObject);
         }
     }

@@ -1,65 +1,78 @@
 using UnityEngine;
+
 public class PlayerMovement : MonoBehaviour
 {
-    private const string FLOORTAG = "Floor";
-    private const string MFLOORTAG = "Mfloor";
-    
-    [SerializeField] private int _speed = 3;
+    private const string FLOOR_TAG = "Floor";
+    private const string MOVINGFLOOR = "MovingFloor";
+    private bool _facingRight = true;
+    private float _velocityX = default;
+    [SerializeField] private float _speed = 3;
+    private float _velocityY = default;
+    [SerializeField] private float _jumpHeight = default;
     private Rigidbody2D _rigidbody2D = null;
-    [SerializeField] private float _jumpforce = 5.0f;
     [SerializeField] private int _jumps = 2;
     [SerializeField] private int _basejumps = 2;
-    
+
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
     }
-    
+
     void Update()
     {
-        if (Input.GetKey(KeyCode.A))
-        {
-            PlayerController(true, _speed);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            PlayerController(false, _speed);
-        }
+        DirectionCharacter();
         if (Input.GetKeyDown(KeyCode.Space))
         {
             DoubleJump();
         }
     }
-    
-    private void PlayerController( bool _moveRight, int speed)
+
+    private void FixedUpdate()
     {
-        if (_moveRight)
+        Movement();
+    }
+
+    private void DirectionCharacter()
+    {
+        if (_rigidbody2D.velocity.x > 0 && !_facingRight)
         {
-            _rigidbody2D.AddForce(Vector2.left * speed, ForceMode2D.Force);
-            
+            Flip();
         }
-        else
+
+        if (_rigidbody2D.velocity.x < 0 && _facingRight)
         {
-            _rigidbody2D.AddForce(Vector2.right * speed, ForceMode2D.Force);
+            Flip();
         }
     }
-    
-   private void DoubleJump()
-   
+
+
+    private void DoubleJump()
     {
         if (_jumps > 0)
         {
-            _rigidbody2D.AddForce(Vector2.up * _jumpforce, ForceMode2D.Impulse);
+            _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, _jumpHeight);
             _jumps--;
         }
     }
-    
+
     private void OnCollisionEnter2D(Collision2D collider)
     {
-        if (collider.gameObject.tag == FLOORTAG || collider.gameObject.tag == MFLOORTAG)
+        if (collider.gameObject.tag == FLOOR_TAG || collider.gameObject.tag == MOVINGFLOOR)
         {
             _jumps = _basejumps;
         }
     }
-}
 
+    private void Movement()
+    {
+        _velocityX = Input.GetAxis("Horizontal");
+        _velocityY = _rigidbody2D.velocity.y;
+        _rigidbody2D.velocity = new Vector2(_velocityX * _speed, _velocityY);
+    }
+
+    private void Flip()
+    {
+        _facingRight = !_facingRight;
+        transform.Rotate(0f, 180f, 0f);
+    }
+}

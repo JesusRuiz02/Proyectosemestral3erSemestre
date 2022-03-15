@@ -12,7 +12,7 @@ public class Spell : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.CompareTag("Enemy"))
+        if (collider.CompareTag("Enemy") || collider.CompareTag("Floor") )  
         {
             Destroy(gameObject);
         }
