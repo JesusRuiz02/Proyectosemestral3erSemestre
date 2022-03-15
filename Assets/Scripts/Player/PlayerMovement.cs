@@ -1,11 +1,9 @@
-using System;
-using JetBrains.Annotations;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     private const string FLOOR_TAG = "Floor";
-    [CanBeNull] private const string MovFLOOR_TAG = "Mfloor";
+    private const string MOVINGFLOOR = "MovingFloor";
     private bool _facingRight = true;
     private float _velocityX = default;
     [SerializeField] private float _speed = 3;
@@ -59,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collider)
     {
-        if (collider.gameObject.tag == FLOOR_TAG || collider.gameObject.tag == MovFLOOR_TAG)
+        if (collider.gameObject.tag == FLOOR_TAG || collider.gameObject.tag == MOVINGFLOOR)
         {
             _jumps = _basejumps;
         }
