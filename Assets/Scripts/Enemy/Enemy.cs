@@ -5,7 +5,9 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float _healthPoints = default;
     [SerializeField] private float _speed = default;
     [SerializeField] private float _damageToGive = default;
+    [SerializeField] private float _boost = default;
 
+    public float Boost => _boost;
     public float DamageToGive => _damageToGive;
     public float Health => _healthPoints;
     public float Speed => _speed;

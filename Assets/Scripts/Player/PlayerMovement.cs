@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private const string FLOOR_TAG = "Floor";
-    private const string MOVINGFLOOR = "MovingFloor";
+    private const string MOVING_FLOOR_TAG = "MovingFloor";
     private bool _facingRight = true;
     private float _velocityX = default;
     [SerializeField] private float _speed = 3;
@@ -57,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collider)
     {
-        if (collider.gameObject.tag == FLOOR_TAG || collider.gameObject.tag == MOVINGFLOOR)
+        if (collider.gameObject.tag == FLOOR_TAG || collider.gameObject.tag == MOVING_FLOOR_TAG)
         {
             _jumps = _basejumps;
         }

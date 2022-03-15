@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a3747632-0b1d-438b-a0dd-6f81d5b2f797" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyectosemestral3erSemestre/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyectosemestral3erSemestre/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/RealLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/RealLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,14 +32,15 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Camera/ChaningCamera.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Camera/RoomCameraController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyHealth.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/Gun.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/MagicBullet.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spell.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/Weapon.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spell.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/FairyRaycast.cs" />
     </changedPaths>
   </component>
   <component name="MarkdownSettingsMigration">
@@ -111,7 +110,7 @@
       <workItem from="1647230879464" duration="3256000" />
       <workItem from="1647263809027" duration="41000" />
       <workItem from="1647264636297" duration="29000" />
-      <workItem from="1647265748303" duration="287000" />
+      <workItem from="1647265748303" duration="7203000" />
     </task>
     <servers />
   </component>

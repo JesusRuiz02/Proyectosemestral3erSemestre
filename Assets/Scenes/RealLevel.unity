@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 6115529}
   - component: {fileID: 6115530}
   - component: {fileID: 6115531}
+  - component: {fileID: 6115532}
   m_Layer: 0
   m_Name: FairyEnemy
   m_TagString: Enemy
@@ -153,12 +154,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6115524}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.47, y: 0.2, z: 6.736191}
+  m_LocalPosition: {x: 14.07, y: -0.58, z: 6.736191}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 75509808}
   - {fileID: 2145503155}
   - {fileID: 1001111501}
+  - {fileID: 139105095}
   m_Father: {fileID: 1347278906}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -174,6 +176,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00eaf926a933e9f43b0744735c3f10b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _actualspeed: 0
+  _boost: 0
   _isStatic: 0
   _isWalker: 1
   _walksRight: 0
@@ -201,7 +205,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _healthPoints: 30
   _speed: 200
-  _damageToGive: 0
+  _damageToGive: 10
+  _boost: 400
 --- !u!212 &6115528
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -302,6 +307,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8407e03f708a4f4eb024b6e55da9f1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6115532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6115524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60110ec3274815a49b8ad462f5d0be37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rigidbody2D: {fileID: 6115529}
+  _distance: 40
+  _dirRight: 0
+  _cast: {fileID: 139105095}
 --- !u!1 &66842651
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,6 +461,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6115525}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &139105094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 139105095}
+  m_Layer: 0
+  m_Name: Cast
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &139105095
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139105094}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.28, y: -0.49, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6115525}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &362801335
 GameObject:
@@ -1028,7 +1079,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _healthPoints: 0
   _speed: 2
-  _damageToGive: 0
+  _damageToGive: 1
+  _boost: 0
 --- !u!1 &729042877
 GameObject:
   m_ObjectHideFlags: 0
@@ -1433,7 +1485,7 @@ GameObject:
   - component: {fileID: 1057993847}
   - component: {fileID: 1057993849}
   - component: {fileID: 1057993850}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1500,7 +1552,7 @@ Transform:
   m_GameObject: {fileID: 1057993841}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -8.36, y: -1.17, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1703609148}
   - {fileID: 1570381852}
@@ -1566,8 +1618,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 894c87fd20ba27046a50bbff36f3aa57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 8
-  _jumpHeight: 5
+  _speed: 15
+  _jumpHeight: 7
   _jumps: 2
   _basejumps: 2
 --- !u!114 &1057993847
@@ -1640,8 +1692,8 @@ MonoBehaviour:
   _inmunityTime: 0.5
   _blinkingtime: 0.5
   _sprite: {fileID: 0}
-  _knockbackForceX: 500
-  _knockbackForceY: 300
+  _knockbackForceX: 600
+  _knockbackForceY: 400
 --- !u!1 &1150555353
 GameObject:
   m_ObjectHideFlags: 0
@@ -1989,7 +2041,7 @@ GameObject:
   - component: {fileID: 1420965569}
   m_Layer: 3
   m_Name: Floor 5
-  m_TagString: Mfloor
+  m_TagString: MovingFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2170,7 +2222,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1570381852
 Transform:
   m_ObjectHideFlags: 0
