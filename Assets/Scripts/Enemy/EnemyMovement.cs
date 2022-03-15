@@ -13,27 +13,29 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private bool _walksRight = default;
     [SerializeField] private Transform _wallCheck, _pitCheck, _groundCheck;
     [SerializeField] private bool _wallDetected, _pitDetected;
-    [FormerlySerializedAs("_groundDetected")] [SerializeField] private bool _isGrounded;
+
+    [FormerlySerializedAs("_groundDetected")] [SerializeField]
+    private bool _isGrounded;
+
     [SerializeField] private float _detectionRadius = default;
     [SerializeField] private LayerMask _whatIsGround;
 
     public bool WalksRight => _walksRight;
-    
-    void Start()    
+
+    void Start()
     {
-        
         _speed = GetComponent<Enemy>().Speed;
         _boost = GetComponent<Enemy>().Boost;
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _actualspeed = _speed;
     }
-    
+
     void Update()
     {
         _pitDetected = !Physics2D.OverlapCircle(_pitCheck.position, _detectionRadius, _whatIsGround);
-        _wallDetected =Physics2D.OverlapCircle(_wallCheck.position, _detectionRadius, _whatIsGround);
+        _wallDetected = Physics2D.OverlapCircle(_wallCheck.position, _detectionRadius, _whatIsGround);
         _isGrounded = Physics2D.OverlapCircle(_groundCheck.position, _detectionRadius, _whatIsGround);
-        if ((_pitDetected  || _wallDetected) && _isGrounded)
+        if ((_pitDetected || _wallDetected) && _isGrounded)
         {
             Flip();
         }
@@ -56,7 +58,7 @@ public class EnemyMovement : MonoBehaviour
             else
             {
                 _rigidbody2D.velocity = new Vector2(_actualspeed * Time.deltaTime, _rigidbody2D.velocity.y);
-            }  
+            }
         }
     }
 
@@ -76,5 +78,3 @@ public class EnemyMovement : MonoBehaviour
         transform.localScale *= new Vector2(-1, transform.localScale.y);
     }
 }
- 
-

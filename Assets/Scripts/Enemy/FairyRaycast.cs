@@ -7,6 +7,7 @@ public class FairyRaycast : MonoBehaviour
     private LayerMask _playerMask = 1 << 6;
     [SerializeField] private bool _dirRight = default;
     [SerializeField] private Transform _cast = default;
+
     void Start()
     {
         _rigidbody2D.GetComponent<Rigidbody2D>();
@@ -21,11 +22,11 @@ public class FairyRaycast : MonoBehaviour
     {
         if (_dirRight)
         {
-          RangeVision(Vector2.right, _cast);  
+            RangeVision(Vector2.right, _cast);
         }
         else
         {
-          RangeVision(Vector2.left, _cast);   
+            RangeVision(Vector2.left, _cast);
         }
     }
 

@@ -205,7 +205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _healthPoints: 30
   _speed: 200
-  _damageToGive: 0
+  _damageToGive: 10
   _boost: 400
 --- !u!212 &6115528
 SpriteRenderer:
@@ -1079,7 +1079,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _healthPoints: 0
   _speed: 2
-  _damageToGive: 0
+  _damageToGive: 1
   _boost: 0
 --- !u!1 &729042877
 GameObject:
@@ -2041,7 +2041,7 @@ GameObject:
   - component: {fileID: 1420965569}
   m_Layer: 3
   m_Name: Floor 5
-  m_TagString: Mfloor
+  m_TagString: MovingFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
