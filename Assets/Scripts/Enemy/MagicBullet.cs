@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class MagicBullet : MonoBehaviour
@@ -29,7 +28,6 @@ public class MagicBullet : MonoBehaviour
     {
         if (collider.CompareTag("Player"))
         {
-           
             Destroy(gameObject);
         }
     }
