@@ -12,7 +12,12 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D _rigidbody2D = null;
     [SerializeField] private int _jumps = 2;
     [SerializeField] private int _basejumps = 2;
+    private Animator _animator;
 
+    private void Awake()
+    {
+        _animator = GetComponent<Animator>();
+    }
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -68,6 +73,8 @@ public class PlayerMovement : MonoBehaviour
         _velocityX = Input.GetAxis("Horizontal");
         _velocityY = _rigidbody2D.velocity.y;
         _rigidbody2D.velocity = new Vector2(_velocityX * _speed, _velocityY);
+        if (_velocityX!=0) _animator.SetBool("Run", true);
+        else _animator.SetBool("Run",false);
     }
 
     private void Flip()
