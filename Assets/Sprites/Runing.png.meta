@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: db4660fd7d0ad5049bc22e5e728b2d12
+guid: 9a2774700b231a247be367828de2e019
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2911428650171903704
-    second: Runing_sprite_sheet-Sheet_0
+      213: -5066346786603853691
+    second: Runing_0
   - first:
-      213: 8816087940992447430
-    second: Runing_sprite_sheet-Sheet_1
+      213: 7234676424855014278
+    second: Runing_1
   - first:
-      213: 9028061540832496926
-    second: Runing_sprite_sheet-Sheet_2
+      213: 4860246208451897828
+    second: Runing_2
   - first:
-      213: -8152140114378574131
-    second: Runing_sprite_sheet-Sheet_3
+      213: -6350744983817395568
+    second: Runing_3
   - first:
-      213: -7938974675250694704
-    second: Runing_sprite_sheet-Sheet_4
+      213: 2578131572785202803
+    second: Runing_4
   - first:
-      213: -8161233816133266467
-    second: Runing_sprite_sheet-Sheet_5
+      213: 9043092839015555421
+    second: Runing_5
   - first:
-      213: -7677542754736015751
-    second: Runing_sprite_sheet-Sheet_6
+      213: -4672802480446008642
+    second: Runing_6
   - first:
-      213: -8946595657161646656
-    second: Runing_sprite_sheet-Sheet_7
+      213: -4833951127332148788
+    second: Runing_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -127,13 +127,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Runing_sprite_sheet-Sheet_0
+      name: Runing_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 110
-        width: 501
-        height: 673
+        x: 174
+        y: 54
+        width: 336
+        height: 449
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,20 +141,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8de24629ee8776820800000000000000
-      internalID: 2911428650171903704
+      spriteID: 5881983b078b0b9b0800000000000000
+      internalID: -5066346786603853691
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Runing_sprite_sheet-Sheet_1
+      name: Runing_1
       rect:
         serializedVersion: 2
-        x: 597
-        y: 33
-        width: 571
-        height: 731
+        x: 574
+        y: 3
+        width: 381
+        height: 488
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,20 +162,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c3b57fc549095a70800000000000000
-      internalID: 8816087940992447430
+      spriteID: 68b4060a0ebb66460800000000000000
+      internalID: 7234676424855014278
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Runing_sprite_sheet-Sheet_2
+      name: Runing_2
       rect:
         serializedVersion: 2
-        x: 1142
-        y: 0
-        width: 661
-        height: 792
+        x: 1017
+        y: 78
+        width: 441
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,20 +183,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1dcfaf732e1a4d70800000000000000
-      internalID: 9028061540832496926
+      spriteID: 4e9e6b70d20137340800000000000000
+      internalID: 4860246208451897828
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Runing_sprite_sheet-Sheet_3
+      name: Runing_3
       rect:
         serializedVersion: 2
-        x: 1864
-        y: 134
-        width: 569
-        height: 638
+        x: 1497
+        y: 71
+        width: 381
+        height: 424
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,20 +204,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc6b04302c7cdde80800000000000000
-      internalID: -8152140114378574131
+      spriteID: 092687cb51f9dd7a0800000000000000
+      internalID: -6350744983817395568
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Runing_sprite_sheet-Sheet_4
+      name: Runing_4
       rect:
         serializedVersion: 2
-        x: 2546
-        y: 128
-        width: 492
-        height: 636
+        x: 1954
+        y: 65
+        width: 328
+        height: 426
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,20 +225,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d53cd8689813d190800000000000000
-      internalID: -7938974675250694704
+      spriteID: 376c414810d57c320800000000000000
+      internalID: 2578131572785202803
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Runing_sprite_sheet-Sheet_5
+      name: Runing_5
       rect:
         serializedVersion: 2
-        x: 3147
-        y: 44
-        width: 523
-        height: 715
+        x: 2353
+        y: 10
+        width: 349
+        height: 476
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -246,20 +246,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd3987495197dbe80800000000000000
-      internalID: -8161233816133266467
+      spriteID: d51a66456058f7d70800000000000000
+      internalID: 9043092839015555421
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Runing_sprite_sheet-Sheet_6
+      name: Runing_6
       rect:
         serializedVersion: 2
-        x: 3740
-        y: 134
-        width: 637
-        height: 630
+        x: 2749
+        y: 71
+        width: 426
+        height: 420
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -267,20 +267,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 976f51cba83e37590800000000000000
-      internalID: -7677542754736015751
+      spriteID: eb2937fc6eed62fb0800000000000000
+      internalID: -4672802480446008642
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Runing_sprite_sheet-Sheet_7
+      name: Runing_7
       rect:
         serializedVersion: 2
-        x: 4472
-        y: 134
-        width: 946
-        height: 630
+        x: 3237
+        y: 71
+        width: 424
+        height: 420
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -288,8 +288,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cdd3d1a6ae47d380800000000000000
-      internalID: -8946595657161646656
+      spriteID: cc9a4c1af0b5aecb0800000000000000
+      internalID: -4833951127332148788
       vertices: []
       indices: 
       edges: []
