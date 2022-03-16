@@ -1,11 +1,9 @@
-using System.Collections;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
     [SerializeField] private Transform _firepoint = default;
     [SerializeField] private GameObject _playerbullet = default;
-
 
     void Update()
     {

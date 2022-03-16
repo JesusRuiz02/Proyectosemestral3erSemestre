@@ -6,8 +6,8 @@ TagManager:
   tags:
   - Floor
   - Enemy
-  - Mfloor
   - Weapon
+  - MovingFloor
   layers:
   - Default
   - TransparentFX
@@ -15,7 +15,7 @@ TagManager:
   - Ground
   - Water
   - UI
-  - Obstacle
+  - Player
   - 
   - 
   - 
