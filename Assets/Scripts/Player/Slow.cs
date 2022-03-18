@@ -12,16 +12,13 @@ public class Slow : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.W) && !isSlow && _slowCharges>0)
         {
             StartCoroutine("SlowFunction");
-            
         }
         else if (!isSlow)
         {
             Time.timeScale = 1;
         }
     }
-
     IEnumerator SlowFunction()
-
     {
         if (_slowCharges>0)
         {
