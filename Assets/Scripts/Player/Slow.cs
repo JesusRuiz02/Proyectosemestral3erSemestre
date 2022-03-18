@@ -1,16 +1,32 @@
+using System.Collections;
+using System.Linq;
 using UnityEngine;
 
 public class Slow : MonoBehaviour
 {
+    [SerializeField] private bool isSlow;
+    [SerializeField] private int _slowCharges=2;
+
     void Update()
     {
-        if (Input.GetKey(KeyCode.W)) 
+        if (Input.GetKeyUp(KeyCode.W) && !isSlow && _slowCharges>0)
         {
-            Time.timeScale = 0.2f;
+            StartCoroutine("SlowFunction");
         }
-        else
+        else if (!isSlow)
         {
-            Time.timeScale = 1f;
+            Time.timeScale = 1;
+        }
+    }
+    IEnumerator SlowFunction()
+    {
+        if (_slowCharges>0)
+        {
+            isSlow = true;
+            Time.timeScale = .2f;
+            yield return new WaitForSeconds(.5f);
+            isSlow = false;
+            _slowCharges--;
         }
     }
 }
