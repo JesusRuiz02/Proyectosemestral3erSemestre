@@ -6470,7 +6470,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 680294261}
-  _offset: {x: 0, y: 3.53, z: -10}
+  _offset: {x: 0, y: 3.29, z: -10}
   _xPoint: 52.4
   _zoomcamera: 4.83
 --- !u!1 &1757536216
