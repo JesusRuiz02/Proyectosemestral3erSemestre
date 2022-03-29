@@ -141,6 +141,11 @@ public class Miniboss : MonoBehaviour
         
     }
 
+    public void LaserToPlayer()
+    {
+        
+    }
+
     private void FlipTowardsPlayer()
     {
         float playerDirection = _player.position.x - transform.position.x;

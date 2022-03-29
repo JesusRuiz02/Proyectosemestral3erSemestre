@@ -3,6 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="a3747632-0b1d-438b-a0dd-6f81d5b2f797" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyectosemestral3erSemestre/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyectosemestral3erSemestre/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Run.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Run.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Miniboss_AttackPlayerAnim.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Miniboss_AttackPlayerAnim.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Miniboss_AttackUpDown.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Miniboss_AttackUpDown.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Miniboss_IDLE.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Miniboss_IDLE.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Miniboss_Slam.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Miniboss_Slam.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Miniboss.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Miniboss.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/attackPlayer.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/attackPlayer.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prepareAttackAnimation.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prepareAttackAnimation.anim.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,6 +135,7 @@
       <workItem from="1647264636297" duration="29000" />
       <workItem from="1647265748303" duration="7203000" />
       <workItem from="1647572267920" duration="1797000" />
+      <workItem from="1648560139557" duration="1042000" />
     </task>
     <servers />
   </component>
