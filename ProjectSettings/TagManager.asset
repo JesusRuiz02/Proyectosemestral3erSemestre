@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Weapon
   - MovingFloor
+  - Melee
   layers:
   - Default
   - TransparentFX
