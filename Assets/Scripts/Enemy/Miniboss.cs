@@ -1,5 +1,8 @@
+using System;
+using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using DG.Tweening;
 
 public class Miniboss : MonoBehaviour
 {
@@ -16,6 +19,16 @@ public class Miniboss : MonoBehaviour
     [SerializeField] private Transform _player = default;
     private Vector2 _playerPosition = default;
     private bool _hasPlayerPosition = false;
+    
+    [SerializeField] private Vector3 _targetLocation = Vector3.zero;
+    [Range(0.5f, 10f), SerializeField] private float _moveDuration = 0.5f;
+    [SerializeField] private Ease _moveEase = Ease.Linear;
+
+    [SerializeField] private DoTweenType _doTweenType = DoTweenType.MovementTwoWay;
+    private enum DoTweenType
+    {
+        MovementTwoWay
+    }
 
     [Header("Other")] 
     [SerializeField] private Transform _groundCheckUp = default;
@@ -37,8 +50,23 @@ public class Miniboss : MonoBehaviour
        _attackMoveDirection.Normalize();
        _enemyRigidbody2D.GetComponent<Rigidbody2D>();
        enemyAnim = GetComponent<Animator>();
+       if (_doTweenType == DoTweenType.MovementTwoWay)
+       {
+           if (_targetLocation == Vector3.zero)
+           {
+               _targetLocation = transform.position;
+           }
+           StartCoroutine(MoveWithBothWays());
+       }
     }
-    
+
+    private IEnumerator MoveWithBothWays()
+    {
+        Vector3 originalLocation = transform.position;
+        transform.DOMove(_targetLocation, _moveDuration).SetEase(_moveEase);
+        yield return new WaitForSeconds(_moveDuration);
+        transform.DOMove(originalLocation, _moveDuration).SetEase(_moveEase);
+    }
     void Update()
     {
         _isTouchingUp = Physics2D.OverlapCircle(_groundCheckUp.position, _groundCheckRadius, _groundLayer);
@@ -140,11 +168,7 @@ public class Miniboss : MonoBehaviour
         }
         
     }
-
-    public void LaserToPlayer()
-    {
-        
-    }
+    
 
     private void FlipTowardsPlayer()
     {
