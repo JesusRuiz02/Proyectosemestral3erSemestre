@@ -1,36 +1,36 @@
 using UnityEngine;
 public class decaying_enemy : MonoBehaviour
 {
-    [SerializeField] public float velocidad;
-    [SerializeField] public float velocidaddeReversa;
-    [SerializeField] public float distanciaDeljugador;
-    [SerializeField] public float rangodeVision;
-    [SerializeField] public float RangodeReversa;
-    [SerializeField] public float RangodeDisparo;
-    [SerializeField] public Transform player;
-    [SerializeField] public Rigidbody2D rb2D;
+    [SerializeField] private float _speed = 30;
+    [SerializeField] private float _reversespeed = 20;
+    [SerializeField] private float _playerDistance = 5;
+    [SerializeField] private float _visionrange = 7;
+    [SerializeField] private float _reverserange = 7;
+    [SerializeField] private float _firingrange = 5;
+    [SerializeField] private Transform _player;
+    [SerializeField] private Rigidbody2D rb2D;
 
     private void Update()
     {
-        distanciaDeljugador = Vector2.Distance(player.position, rb2D.position);
-        if (distanciaDeljugador < rangodeVision && distanciaDeljugador > RangodeReversa && distanciaDeljugador > RangodeDisparo)
+        _playerDistance = Vector2.Distance(_player.position, rb2D.position);
+        if (_playerDistance < _visionrange && _playerDistance > _reverserange && _playerDistance > _firingrange)
         {
-            Vector2 objetivo = new Vector2(player.position.x, player.position.y);
-            Vector2 nuevaPos = Vector2.MoveTowards(rb2D.position, objetivo, velocidad * Time.deltaTime);
-            rb2D.MovePosition(nuevaPos);
+            Vector2 _target = new Vector2(_player.position.x, _player.position.y);
+            Vector2 _newPos = Vector2.MoveTowards(rb2D.position, _target, _speed * Time.deltaTime);
+            rb2D.MovePosition(_newPos);
         }
 
-        else if (distanciaDeljugador < rangodeVision && distanciaDeljugador > RangodeReversa && distanciaDeljugador <= RangodeDisparo)
+        else if (_playerDistance < _visionrange && _playerDistance > _reverserange && _playerDistance <= _firingrange)
         {
-            Vector2 objetivo = new Vector2(player.position.x, player.position.y);
-            Vector2 nuevaPos = Vector2.MoveTowards(rb2D.position, objetivo, 0 * Time.deltaTime);
-            rb2D.MovePosition(nuevaPos);
+            Vector2 _target = new Vector2(_player.position.x, _player.position.y);
+            Vector2 _newPos = Vector2.MoveTowards(rb2D.position, _target, 0 * Time.deltaTime);
+            rb2D.MovePosition(_newPos);
         }
-        else if (distanciaDeljugador < RangodeReversa)
+        else if (_playerDistance < _reverserange)
         {
-            Vector2 objetivo = new Vector2(player.position.x, player.position.y);
-            Vector2 nuevaPos = Vector2.MoveTowards(rb2D.position, objetivo, velocidaddeReversa * Time.deltaTime);
-            rb2D.MovePosition(nuevaPos);
+            Vector2 _target = new Vector2(_player.position.x, _player.position.y);
+            Vector2 _newPos = Vector2.MoveTowards(rb2D.position, _target, _reversespeed * Time.deltaTime);
+            rb2D.MovePosition(_newPos);
         }
     }
 }

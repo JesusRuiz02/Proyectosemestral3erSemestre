@@ -380,7 +380,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1463858086}
   - component: {fileID: 1463858085}
-  - component: {fileID: 1463858084}
   - component: {fileID: 1463858087}
   m_Layer: 0
   m_Name: Player
@@ -389,32 +388,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1463858084
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1463858083}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!212 &1463858085
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -492,8 +465,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22f83ccde89a6b540af7d40546dfd41a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 10
-  velocidad2: 8
+  _speed: 10
+  _speed2: 7
 --- !u!1 &1691945139
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,13 +727,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90acf994f034b9a40b2a6321cdfc52c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 100
-  velocidaddeReversa: 50
-  distanciaDeljugador: 10
-  rangodeVision: 7
-  RangodeReversa: 5
-  RangodeDisparo: 5
-  player: {fileID: 1463858086}
+  _speed: 30
+  _reversespeed: 20
+  _playerDistance: 5
+  _visionrange: 7
+  _reverserange: 7
+  _firingrange: 5
+  _player: {fileID: 1463858086}
   rb2D: {fileID: 2038888668}
 --- !u!50 &2038888668
 Rigidbody2D:
