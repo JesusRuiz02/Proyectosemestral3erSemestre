@@ -641,10 +641,10 @@ MonoBehaviour:
   _attackMoveDirection: {x: -1, y: 5}
   _attackPlayerSpeed: 25
   _player: {fileID: 1057993843}
-  _targetLocation: {x: 24.11, y: 6.73, z: 0}
-  _moveDuration: 6
+  _targetLocation: {x: 28.95, y: 3.47, z: 0}
+  _targetsecondLocation: {x: 11, y: 3.47, z: 0}
+  _moveDuration: 1
   _moveEase: 1
-  _doTweenType: 0
   _groundCheckUp: {fileID: 1754456248}
   _groundCheckDown: {fileID: 1112390267}
   _groundCheckWall: {fileID: 433853162}
@@ -658,6 +658,7 @@ MonoBehaviour:
   _isFacingLeft: 1
   _goingUp: 1
   _enemyRigidbody2D: {fileID: 408351551}
+  _doTweenType: 1
 --- !u!61 &408351548
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -743,7 +744,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 408351546}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.81, y: 10.78, z: 0}
+  m_LocalPosition: {x: 19.87, y: 9.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1112390267}

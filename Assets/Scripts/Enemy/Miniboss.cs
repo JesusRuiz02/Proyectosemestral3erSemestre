@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -21,14 +20,9 @@ public class Miniboss : MonoBehaviour
     private bool _hasPlayerPosition = false;
     
     [SerializeField] private Vector3 _targetLocation = Vector3.zero;
+    [SerializeField] private  Vector3 _targetsecondLocation = Vector3.zero;
     [Range(0.5f, 10f), SerializeField] private float _moveDuration = 0.5f;
     [SerializeField] private Ease _moveEase = Ease.Linear;
-
-    [SerializeField] private DoTweenType _doTweenType = DoTweenType.MovementTwoWay;
-    private enum DoTweenType
-    {
-        MovementTwoWay
-    }
 
     [Header("Other")] 
     [SerializeField] private Transform _groundCheckUp = default;
@@ -44,29 +38,46 @@ public class Miniboss : MonoBehaviour
     [SerializeField] private Rigidbody2D _enemyRigidbody2D;
     private Animator enemyAnim;
     
+   
+    [SerializeField] private DoTweenType _doTweenType = DoTweenType.MovementOfLaser;
+    private enum DoTweenType
+    {
+        MovementOfLaser,
+        AttackLeftToRight
+    }
+    
     void Start()
     {
        _idelMoveDirection.Normalize();
        _attackMoveDirection.Normalize();
        _enemyRigidbody2D.GetComponent<Rigidbody2D>();
        enemyAnim = GetComponent<Animator>();
-       if (_doTweenType == DoTweenType.MovementTwoWay)
+       if (_doTweenType == DoTweenType.MovementOfLaser)
+       {
+           if (_targetLocation == Vector3.zero)
+               _targetLocation = transform.position;
+           Vector3 originalLocation = transform.position;
+           DOTween.Sequence()
+               .Append(transform.DOMove(_targetLocation, _moveDuration).SetEase(_moveEase))
+               .Append(transform.DOMove(originalLocation, _moveDuration).SetEase(_moveEase).SetDelay(2f));
+       }
+
+       if (_doTweenType == DoTweenType.AttackLeftToRight)
        {
            if (_targetLocation == Vector3.zero)
            {
                _targetLocation = transform.position;
            }
-           StartCoroutine(MoveWithBothWays());
+           Vector3 originalLocation = transform.position;
+           DOTween.Sequence()
+               .Append(transform.DOMove(_targetLocation, 2f).SetEase(_moveEase))
+               .Append(transform.DOMove(_targetsecondLocation, _moveDuration).SetEase(_moveEase).SetDelay(1.5f))
+               .Append(transform.DOMove(_targetLocation, _moveDuration).SetEase(_moveEase))
+               .Append(transform.DOMove(_targetsecondLocation, _moveDuration).SetEase(_moveEase))
+               .Append(transform.DOMove(originalLocation, _moveDuration).SetEase(_moveEase));
        }
     }
-
-    private IEnumerator MoveWithBothWays()
-    {
-        Vector3 originalLocation = transform.position;
-        transform.DOMove(_targetLocation, _moveDuration).SetEase(_moveEase);
-        yield return new WaitForSeconds(_moveDuration);
-        transform.DOMove(originalLocation, _moveDuration).SetEase(_moveEase);
-    }
+    
     void Update()
     {
         _isTouchingUp = Physics2D.OverlapCircle(_groundCheckUp.position, _groundCheckRadius, _groundLayer);
