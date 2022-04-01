@@ -635,30 +635,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ede717fad68c140902cef2b9e7a1b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _idelMoveSpeed: 3
-  _idelMoveDirection: {x: -1, y: 2}
-  _attackMoveSpeed: 20
-  _attackMoveDirection: {x: -1, y: 5}
-  _attackPlayerSpeed: 25
-  _player: {fileID: 1057993843}
   _targetLocation: {x: 28.95, y: 3.47, z: 0}
   _targetsecondLocation: {x: 11, y: 3.47, z: 0}
   _moveDuration: 1
   _moveEase: 1
-  _groundCheckUp: {fileID: 1754456248}
-  _groundCheckDown: {fileID: 1112390267}
-  _groundCheckWall: {fileID: 433853162}
-  _groundCheckRadius: 0.2
-  _groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  _isTouchingDown: 0
-  _isTouchingUp: 0
-  _isTouchingWall: 0
-  _isFacingLeft: 1
-  _goingUp: 1
   _enemyRigidbody2D: {fileID: 408351551}
-  _doTweenType: 1
+  _isAttacking: 0
+  _doTweenType: 3
+  _pathvalue:
+  - {x: 11.16, y: 2.29, z: 0}
+  - {x: 28.34, y: 13.74, z: 0}
+  - {x: 11.1, y: 13.74, z: 0}
+  - {x: 28.34, y: 2.29, z: 0}
+  - {x: 20, y: 10, z: 0}
 --- !u!61 &408351548
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -672,7 +661,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.05644989, y: 0.10349262}
+  m_Offset: {x: 0.008987427, y: -0.007256508}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -683,7 +672,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.5590897, y: 4.255309}
+  m_Size: {x: 1.1858902, y: 1.3125439}
   m_EdgeRadius: 0
 --- !u!212 &408351549
 SpriteRenderer:
@@ -744,8 +733,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 408351546}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.87, y: 9.6, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 19.98, y: 10.09, z: 0}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children:
   - {fileID: 1112390267}
   - {fileID: 1754456248}
@@ -782,7 +771,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 408351546}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 837e7bd029403304b9042c5b127efda3, type: 2}
   m_CullingMode: 0
