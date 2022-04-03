@@ -3,25 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="a3747632-0b1d-438b-a0dd-6f81d5b2f797" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyectosemestral3erSemestre/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyectosemestral3erSemestre/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/EnemyAnim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/EnemyAnim/Miniboss_AttackPlayerAnim.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/EnemyAnim/Miniboss_AttackPlayerAnim.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/EnemyAnim/Miniboss_AttackUpDown.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/EnemyAnim/Miniboss_AttackUpDown.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/EnemyAnim/Miniboss_IDLE.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/EnemyAnim/Miniboss_IDLE.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/EnemyAnim/Miniboss_Slam.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/EnemyAnim/Miniboss_Slam.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/EnemyAnim/Run.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/EnemyAnim/Run.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/EnemyAnim/attackPlayer.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/EnemyAnim/attackPlayer.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/EnemyAnim/prepareAttackAnimation.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/EnemyAnim/prepareAttackAnimation.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullet.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/RealLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/RealLevel.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Miniboss.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Miniboss.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Sprite/Miniboss 2.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Sprite/Miniboss 2.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Spell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Spell.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Sprite/GruzMother Anitcipation Animation .png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Sprite/GruzMother Anitcipation Animation .png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Sprite/GruzmutterFlyAnim.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Sprite/GruzmutterFlyAnim.png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +30,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/BossBullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyHealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/MagicBullet.cs" root0="FORCE_HIGHLIGHTING" />
@@ -61,12 +51,13 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/Gun.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/MagicBullet.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/Weapon.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spell.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/FairyRaycast.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spell.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/BossBullet.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Miniboss.cs" />
     </changedPaths>
   </component>
@@ -141,7 +132,15 @@
       <workItem from="1647572267920" duration="1797000" />
       <workItem from="1648560139557" duration="5466000" />
       <workItem from="1648774732137" duration="4323000" />
-      <workItem from="1648852321059" duration="3939000" />
+      <workItem from="1648852321059" duration="5720000" />
+      <workItem from="1648954598719" duration="758000" />
+      <workItem from="1648957572937" duration="642000" />
+      <workItem from="1648959099718" duration="676000" />
+      <workItem from="1648960693653" duration="160000" />
+      <workItem from="1648961157248" duration="436000" />
+      <workItem from="1648961703223" duration="112000" />
+      <workItem from="1649011795712" duration="6817000" />
+      <workItem from="1649019542926" duration="2245000" />
     </task>
     <servers />
   </component>

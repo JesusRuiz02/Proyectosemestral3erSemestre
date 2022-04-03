@@ -1,9 +1,7 @@
-using System;
-using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 using DG.Tweening;
-using Unity.Collections;
+using Unity.Mathematics;
 
 public class Miniboss : MonoBehaviour
 {
@@ -14,8 +12,9 @@ public class Miniboss : MonoBehaviour
 
     [Header("Other")]
     [SerializeField] private Rigidbody2D _enemyRigidbody2D;
-    private Animator enemyAnim;
-    [SerializeField] private bool _isAttacking = false;
+    [SerializeField] private GameObject _proyectile = default;
+    [SerializeField] private float _timer = 0f;
+    [SerializeField] private float _maxtimer = 15f;
 
 
     [SerializeField] private DoTweenType _doTweenType = DoTweenType.MovementOfLaser;
@@ -31,77 +30,86 @@ public class Miniboss : MonoBehaviour
     void Start()
     { 
        _enemyRigidbody2D.GetComponent<Rigidbody2D>();
-       enemyAnim = GetComponent<Animator>();
     }
     
     void Update()
     {
-        if (_isAttacking == false)
+        _timer += Time.deltaTime;
+        if (_timer >= _maxtimer)
         {
-            RandomStatePicker();
+           RandomStatePicker();
         }
-        minibossState();
     }
 
     private void RandomStatePicker()
     {
-        _isAttacking = true;
-        int RandomStatePicker = Random.Range(0,3);
-        if (RandomStatePicker == 0)
+        int randomStatePicker = Random.Range(0,4);
+        if (randomStatePicker == 0)
         {
-            _doTweenType = DoTweenType.AttackToCorners;
+           LaserAttack();
+            _maxtimer = 10f;
         }
-        else if (RandomStatePicker == 1)
+        else if (randomStatePicker == 1)
         {
-            _doTweenType = DoTweenType.MovementOfLaser;
+            LaserAttack();
+            _maxtimer = 5f;
         }
-        else if (RandomStatePicker == 2)
+        else if (randomStatePicker == 2)
         {
-            _doTweenType = DoTweenType.AttackLeftToRight;
-        } 
+          LaserAttack();
+            _maxtimer = 8f;
+        }
+        else if (randomStatePicker == 3)
+        {
+           LaserAttack();
+            _maxtimer = 7f;
+        }
     }
 
-    private void minibossState()
+ 
+    private void LaserAttack()
     {
-        if (_doTweenType == DoTweenType.MovementOfLaser)
+        if (_targetLocation == Vector3.zero)
+            _targetLocation = transform.position;
+        Vector3 originalLocation = transform.position;
+        transform.DOMove(_targetLocation, _moveDuration).SetEase(_moveEase);
+        transform.DOMove(originalLocation, _moveDuration).SetEase(_moveEase).SetDelay(2f);
+        Instantiate(_proyectile, transform.position, quaternion.identity);
+        _timer = 0;
+    }
+    
+    private void AttackLeftRight()
+    {
+        if (_targetLocation == Vector3.zero)
         {
-            if (_targetLocation == Vector3.zero)
-                _targetLocation = transform.position;
-            Vector3 originalLocation = transform.position;
-            DOTween.Sequence()
-                .Append(transform.DOMove(_targetLocation, _moveDuration).SetEase(_moveEase))
-                .Append(transform.DOMove(originalLocation, _moveDuration).SetEase(_moveEase).SetDelay(2f));
-            _isAttacking = false;
+            _targetLocation = transform.position;
         }
+        Vector3 originalLocation = transform.position;
+        DOTween.Sequence()
+            .Append(transform.DOMove(_targetLocation, 2f).SetEase(_moveEase))
+            .Append(transform.DOMove(_targetsecondLocation, _moveDuration).SetEase(_moveEase).SetDelay(1.5f))
+            .Append(transform.DOMove(_targetLocation, _moveDuration).SetEase(_moveEase))
+            .Append(transform.DOMove(_targetsecondLocation, _moveDuration).SetEase(_moveEase))
+            .Append(transform.DOMove(originalLocation, _moveDuration).SetEase(_moveEase));
+        _timer = 0;
+    }
 
-        if (_doTweenType == DoTweenType.AttackLeftToRight)
+    private void AttackToCorners()
+    {
+        if (_targetLocation == Vector3.zero)
         {
-            if (_targetLocation == Vector3.zero)
-            {
-                _targetLocation = transform.position;
-            }
-            Vector3 originalLocation = transform.position;
-            DOTween.Sequence()
-                .Append(transform.DOMove(_targetLocation, 2f).SetEase(_moveEase))
-                .Append(transform.DOMove(_targetsecondLocation, _moveDuration).SetEase(_moveEase).SetDelay(1.5f))
-                .Append(transform.DOMove(_targetLocation, _moveDuration).SetEase(_moveEase))
-                .Append(transform.DOMove(_targetsecondLocation, _moveDuration).SetEase(_moveEase))
-                .Append(transform.DOMove(originalLocation, _moveDuration).SetEase(_moveEase));
-            _isAttacking = false;
+            _targetLocation = transform.position;
         }
+        Vector3 originalLocation = transform.position;
+        DOTween.Sequence()
+            .Append(transform.DOPath(_pathvalue , 10f, PathType.Linear , PathMode.Sidescroller2D, 10, Color.blue));
+        _timer = 0;
+    }
 
-        if (_doTweenType == DoTweenType.AttackToCorners)
-        {
-            if (_targetLocation == Vector3.zero)
-            {
-                _targetLocation = transform.position;
-            }
-            Vector3 originalLocation = transform.position;
-
-            DOTween.Sequence()
-                .Append(transform.DOPath(_pathvalue , 10f, PathType.CatmullRom , PathMode.Sidescroller2D, 10, Color.blue));
-            _isAttacking = false;
-        }
+    private void Rotate()
+    {
+        transform.DORotate(new Vector3(0, 0, 720), 6, RotateMode.FastBeyond360);
+        _timer = 0;
     }
 
 }
