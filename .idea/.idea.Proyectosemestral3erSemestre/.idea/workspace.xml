@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3747632-0b1d-438b-a0dd-6f81d5b2f797" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyectosemestral3erSemestre/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyectosemestral3erSemestre/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/RealLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/RealLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Miniboss.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Miniboss.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Spell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Spell.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Sprite/GruzMother Anitcipation Animation .png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Sprite/GruzMother Anitcipation Animation .png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Sprite/GruzmutterFlyAnim.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Sprite/GruzmutterFlyAnim.png.meta" beforeDir="false" />
-    </list>
+    <list default="true" id="a3747632-0b1d-438b-a0dd-6f81d5b2f797" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -140,7 +130,7 @@
       <workItem from="1648961157248" duration="436000" />
       <workItem from="1648961703223" duration="112000" />
       <workItem from="1649011795712" duration="6817000" />
-      <workItem from="1649019542926" duration="2245000" />
+      <workItem from="1649019542926" duration="2270000" />
     </task>
     <servers />
   </component>
