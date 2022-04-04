@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class FollowCamera : MonoBehaviour
 {
-    [SerializeField] private Transform _player;
+    [SerializeField] private Transform _player = default;
     public Vector3 _offset = default;
     [SerializeField] private float _xPoint = 52.2f;
     [SerializeField] private float _zoomcamera = 4.6f;
