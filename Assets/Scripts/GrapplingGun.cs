@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tutorial_GrapplingGun : MonoBehaviour
+public class GrapplingGun : MonoBehaviour
 {
     [Header("Scripts Ref:")]
     public Tutorial_GrapplingRope grappleRope;
