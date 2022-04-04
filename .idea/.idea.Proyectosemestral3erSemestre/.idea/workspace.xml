@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3747632-0b1d-438b-a0dd-6f81d5b2f797" name="Default Changelist" comment="" />
+    <list default="true" id="a3747632-0b1d-438b-a0dd-6f81d5b2f797" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyectosemestral3erSemestre/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyectosemestral3erSemestre/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Laser.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Laser.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Laser.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Laser.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BulletBoss.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BulletBoss.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Miniboss.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Miniboss.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/RealLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/RealLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/BossBullet.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/BossBullet.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Miniboss.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Miniboss.cs.meta" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,9 +33,10 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/BossBullet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D3B66F0A-D4E3-4A55-B6EF-91AB84878193/1f/cd0dde99/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyHealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Miniboss/MiniBullets.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/MagicBullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelPhysics/Floor.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -49,6 +63,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spell.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/BossBullet.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Miniboss.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Miniboos/BossBullet.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Miniboos/MiniBullets.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Miniboss/Miniboss.cs" />
     </changedPaths>
   </component>
   <component name="MarkdownSettingsMigration">
@@ -131,6 +148,7 @@
       <workItem from="1648961703223" duration="112000" />
       <workItem from="1649011795712" duration="6817000" />
       <workItem from="1649019542926" duration="2270000" />
+      <workItem from="1649030953108" duration="8516000" />
     </task>
     <servers />
   </component>

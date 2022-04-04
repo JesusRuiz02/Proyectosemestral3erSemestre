@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 58bb00a8a7e33e14da5bba6bd609e7ac
+guid: 63a0192db576706438c480699f5fc2be
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9082429109045791810
-    second: Laser_0
+      213: -5284892330271554607
+    second: Laserv2_0
   - first:
-      213: -8599512977041186160
-    second: Laser_1
+      213: 6456144980033211393
+    second: Laserv2_1
   - first:
-      213: -4876627861783150909
-    second: Laser_2
+      213: 2585204944168310820
+    second: Laserv2_2
   - first:
-      213: 7394846351055212603
-    second: Laser_3
+      213: 5879233340782031925
+    second: Laserv2_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,7 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Laser_0
+      name: Laserv2_0
       rect:
         serializedVersion: 2
         x: 36
@@ -129,20 +129,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24c875667254b0e70800000000000000
-      internalID: 9082429109045791810
+      spriteID: 1d34af91d6a48a6b0800000000000000
+      internalID: -5284892330271554607
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Laser_1
+      name: Laserv2_1
       rect:
         serializedVersion: 2
-        x: 300
-        y: 24
-        width: 228
-        height: 212
+        x: 336
+        y: 56
+        width: 160
+        height: 152
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0922912728468a880800000000000000
-      internalID: -8599512977041186160
+      spriteID: 10c0d4937a5d89950800000000000000
+      internalID: 6456144980033211393
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Laser_2
+      name: Laserv2_2
       rect:
         serializedVersion: 2
         x: 576
@@ -171,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ce74a41cccb25cb0800000000000000
-      internalID: -4876627861783150909
+      spriteID: 4285cb0233e70e320800000000000000
+      internalID: 2585204944168310820
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Laser_3
+      name: Laserv2_3
       rect:
         serializedVersion: 2
-        x: 900
-        y: 24
-        width: 228
-        height: 212
+        x: 936
+        y: 44
+        width: 160
+        height: 168
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,8 +192,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b305d33a395cf9660800000000000000
-      internalID: 7394846351055212603
+      spriteID: 53432fce29b379150800000000000000
+      internalID: 5879233340782031925
       vertices: []
       indices: 
       edges: []
