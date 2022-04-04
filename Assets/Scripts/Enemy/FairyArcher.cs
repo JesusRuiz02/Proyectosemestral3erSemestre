@@ -3,8 +3,9 @@ using UnityEngine;
 
 public class FairyArcher : MonoBehaviour
 {
-    [SerializeField] private GameObject _magicbullet;
+    [SerializeField] private GameObject _magicbullet = default;
     [SerializeField] private float _repeatrate = 3f;
+    
     void Start()
     {
         RepeatingSpawn();
@@ -21,3 +22,4 @@ public class FairyArcher : MonoBehaviour
     }
 
 }
+

@@ -3,7 +3,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     Enemy _enemy = default;
-    [SerializeField] private Rigidbody2D _rigidbody2D;
+    [SerializeField] private Rigidbody2D _rigidbody2D = default;
     [SerializeField] private float _knockBackForceX = 200;
     [SerializeField] private float _knockBackForceY = 100;
 
