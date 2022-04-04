@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3747632-0b1d-438b-a0dd-6f81d5b2f797" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Enable_Camera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enable_Camera.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/FollowCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/FollowCamera.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/RoomCameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/RoomCameraController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/FairyArcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/FairyArcher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyectosemestral3erSemestre/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyectosemestral3erSemestre/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/RealLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/RealLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Miniboss/MiniBullets.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Miniboss/MiniBullets.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,14 +14,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D3B66F0A-D4E3-4A55-B6EF-91AB84878193/1f/cd0dde99/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyHealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Enable_Camera.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D3B66F0A-D4E3-4A55-B6EF-91AB84878193/1f/cd0dde99/Component.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/FollowCamera.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../PracticasPacrial2Algebra/Practica 2/Assets/Scripts/Rebote.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Miniboss/MiniBullets.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/MagicBullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelPhysics/Floor.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -34,21 +39,25 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/RotationWheel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelPhysics/Floor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelPhysics/RotationWheel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/FairyArcher.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Camera/ChaningCamera.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Camera/RoomCameraController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyHealth.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/Gun.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/MagicBullet.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/Weapon.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spell.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/MagicBullet.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/FairyRaycast.cs" />
-      <option value="$PROJECT_DIR$/Assets/Enable_Camera.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Camera/FollowCamera.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Camera/RoomCameraController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/FairyArcher.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/Spell.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/BossBullet.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Miniboss.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Miniboos/BossBullet.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Miniboos/MiniBullets.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Miniboss/Miniboss.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Miniboss/MiniBullets.cs" />
     </changedPaths>
   </component>
   <component name="MarkdownSettingsMigration">
@@ -119,9 +128,19 @@
       <workItem from="1647263809027" duration="41000" />
       <workItem from="1647264636297" duration="29000" />
       <workItem from="1647265748303" duration="7203000" />
-      <workItem from="1647817850098" duration="116000" />
-      <workItem from="1647817992209" duration="2340000" />
-      <workItem from="1648004345698" duration="1279000" />
+      <workItem from="1647572267920" duration="1797000" />
+      <workItem from="1648560139557" duration="5466000" />
+      <workItem from="1648774732137" duration="4323000" />
+      <workItem from="1648852321059" duration="5720000" />
+      <workItem from="1648954598719" duration="758000" />
+      <workItem from="1648957572937" duration="642000" />
+      <workItem from="1648959099718" duration="676000" />
+      <workItem from="1648960693653" duration="160000" />
+      <workItem from="1648961157248" duration="436000" />
+      <workItem from="1648961703223" duration="112000" />
+      <workItem from="1649011795712" duration="6817000" />
+      <workItem from="1649019542926" duration="2270000" />
+      <workItem from="1649030953108" duration="9281000" />
     </task>
     <servers />
   </component>
