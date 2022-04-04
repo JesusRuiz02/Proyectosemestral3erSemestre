@@ -18,10 +18,11 @@ public class ActivateWall : MonoBehaviour
         { 
             GetComponent<BoxCollider2D>().enabled = true;
             GetComponent<SpriteRenderer>().enabled = true;
+            StartCoroutine(ActivatingBoss());
         }
     }
 
-    private IEnumerator _activatingBoss()
+    private IEnumerator ActivatingBoss()
     {
         yield return new WaitForSeconds(2f);
         _miniboss.SetActive(true);

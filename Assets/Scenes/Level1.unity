@@ -1078,7 +1078,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3969617519695482364, guid: d9772181751fefc4e845d45cc64e954f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3969617519695482364, guid: d9772181751fefc4e845d45cc64e954f, type: 3}
       propertyPath: m_TagString
@@ -1369,6 +1369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isMinibossDeath: 0
+  _miniboss: {fileID: 265415158}
 --- !u!4 &300926786 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 769915612867904637, guid: 0e42bd0390ce769418e244f6698125d3, type: 3}
@@ -3971,11 +3972,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7456938750373967345, guid: 8ae6e99cd49064748a4b6d1da0a74cc8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 39.24
+      value: 49.48
       objectReference: {fileID: 0}
     - target: {fileID: 7456938750373967345, guid: 8ae6e99cd49064748a4b6d1da0a74cc8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 30.48
+      value: 31.22
       objectReference: {fileID: 0}
     - target: {fileID: 7456938750373967345, guid: 8ae6e99cd49064748a4b6d1da0a74cc8, type: 3}
       propertyPath: m_LocalPosition.z
