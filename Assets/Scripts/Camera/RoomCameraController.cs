@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class RoomCameraController : MonoBehaviour
 {
-    [SerializeField] private Camera _camera;
+    [SerializeField] private Camera _camera = default;
     [SerializeField] private Vector3 _positioncamera = new Vector3(17, -0.5f, -10);
     [SerializeField] private float _Camerazoom = default;
 
@@ -25,3 +25,5 @@ public class RoomCameraController : MonoBehaviour
         _camera.orthographicSize = _Camerazoom;
     }
 }
+
+

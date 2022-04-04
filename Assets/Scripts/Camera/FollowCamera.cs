@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 public class FollowCamera : MonoBehaviour
@@ -19,3 +18,4 @@ public class FollowCamera : MonoBehaviour
         transform.position = new Vector3( _xPoint, _player.position.y + _offset.y, _offset.z);
     }
 }
+
