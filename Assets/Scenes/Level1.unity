@@ -4029,6 +4029,14 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7456938750373967352, guid: 8ae6e99cd49064748a4b6d1da0a74cc8, type: 3}
+      propertyPath: _maxHealth
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456938750373967352, guid: 8ae6e99cd49064748a4b6d1da0a74cc8, type: 3}
+      propertyPath: _currentHealth
+      value: 400
+      objectReference: {fileID: 0}
     - target: {fileID: 9022695508205374611, guid: 8ae6e99cd49064748a4b6d1da0a74cc8, type: 3}
       propertyPath: m_IsActive
       value: 1

@@ -1,9 +1,11 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class ActivateWall : MonoBehaviour
 {
     [SerializeField] private bool _isMinibossDeath = false;
+    [SerializeField] private GameObject _miniboss = default;
     void Update()
     {
         if (_isMinibossDeath)
@@ -16,8 +18,12 @@ public class ActivateWall : MonoBehaviour
         { 
             GetComponent<BoxCollider2D>().enabled = true;
             GetComponent<SpriteRenderer>().enabled = true;
-            GameObject.FindGameObjectWithTag("Miniboss").SetActive(true);
         }
-        
+    }
+
+    private IEnumerator _activatingBoss()
+    {
+        yield return new WaitForSeconds(2f);
+        _miniboss.SetActive(true);
     }
 }
