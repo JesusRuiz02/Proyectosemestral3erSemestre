@@ -11,7 +11,7 @@ public class Miniboss : MonoBehaviour
     [SerializeField] private Ease _moveEase = Ease.Linear;
 
     [Header("Other")]
-    [SerializeField] private Rigidbody2D _enemyRigidbody2D;
+    [SerializeField] private Rigidbody2D _enemyRigidbody2D = default;
     [SerializeField] private GameObject _projectile = default;
     [SerializeField] private float _timer = 0f;
     [SerializeField] private float _maxtimer = 15f;
@@ -20,7 +20,6 @@ public class Miniboss : MonoBehaviour
     [SerializeField] private Transform _firepoint3 = default;
     [SerializeField] private Transform _firepoint4 = default;
     [SerializeField] private GameObject _bullets = default;
-
 
     [SerializeField] private DoTweenType _doTweenType = DoTweenType.MovementOfLaser;
     [SerializeField] private Vector3[] _pathvalue = new Vector3[3];
@@ -126,6 +125,7 @@ public class Miniboss : MonoBehaviour
     {
         InvokeRepeating("CreateProjectiles",0,2f);
     }
+    
     private void CreateProjectiles()
     {
         Instantiate(_bullets, _firepoint.position, _firepoint.rotation);
@@ -133,6 +133,7 @@ public class Miniboss : MonoBehaviour
         Instantiate(_bullets, _firepoint3.position, _firepoint3.rotation);
         Instantiate(_bullets, _firepoint4.position, _firepoint4.rotation);
     }
+    
     private void CreateLaserAttack()
     {
         Instantiate(_projectile, _firepoint.position, quaternion.identity); 
@@ -142,6 +143,5 @@ public class Miniboss : MonoBehaviour
     {
         InvokeRepeating("CreateLaserAttack",1.8f, 400);
     }
-    
-
 }
+

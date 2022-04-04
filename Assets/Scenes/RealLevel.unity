@@ -2090,7 +2090,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.015477836}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2101,7 +2101,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.9690443}
   m_EdgeRadius: 0
 --- !u!1 &1317088580
 GameObject:
@@ -3137,6 +3137,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3969617519695482362, guid: d9772181751fefc4e845d45cc64e954f, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9735975
+      objectReference: {fileID: 0}
+    - target: {fileID: 3969617519695482362, guid: d9772181751fefc4e845d45cc64e954f, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0092692
+      objectReference: {fileID: 0}
+    - target: {fileID: 3969617519695482362, guid: d9772181751fefc4e845d45cc64e954f, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.024151325
+      objectReference: {fileID: 0}
+    - target: {fileID: 3969617519695482362, guid: d9772181751fefc4e845d45cc64e954f, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.007907152
+      objectReference: {fileID: 0}
     - target: {fileID: 3969617519695482364, guid: d9772181751fefc4e845d45cc64e954f, type: 3}
       propertyPath: m_Name
       value: Miniboss
@@ -3175,7 +3191,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3969617519695482365, guid: d9772181751fefc4e845d45cc64e954f, type: 3}
       propertyPath: _targetLocation.y
-      value: 2.6
+      value: 2.8
       objectReference: {fileID: 0}
     - target: {fileID: 3969617519695482365, guid: d9772181751fefc4e845d45cc64e954f, type: 3}
       propertyPath: _firepoint.Array.size
@@ -3187,7 +3203,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3969617519695482365, guid: d9772181751fefc4e845d45cc64e954f, type: 3}
       propertyPath: _targetsecondLocation.y
-      value: 2.6
+      value: 2.8
       objectReference: {fileID: 0}
     - target: {fileID: 3969617519695482365, guid: d9772181751fefc4e845d45cc64e954f, type: 3}
       propertyPath: _firepoint.Array.data[0]

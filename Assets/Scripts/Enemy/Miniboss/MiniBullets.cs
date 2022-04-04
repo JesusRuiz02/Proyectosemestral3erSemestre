@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MiniBullets : MonoBehaviour
 {
-    [SerializeField] private Rigidbody2D _rigidBody2D;
+    [SerializeField] private Rigidbody2D _rigidBody2D = default;
     [SerializeField] private float _speed = 20;
     void Start()
     {
@@ -15,10 +15,10 @@ public class MiniBullets : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        
         if (collider.CompareTag("Floor"))
         {
             Destroy(gameObject);
         }
-       
     }
 }
