@@ -20,6 +20,6 @@ public class FairyArcher : MonoBehaviour
     {
         InvokeRepeating("SpawnBullet",0f,_repeatrate);
     }
-
 }
+
 
