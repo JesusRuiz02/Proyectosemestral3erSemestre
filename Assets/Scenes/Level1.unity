@@ -1229,9 +1229,9 @@ GameObject:
   m_Component:
   - component: {fileID: 290519742}
   - component: {fileID: 290519744}
+  - component: {fileID: 290519745}
   - component: {fileID: 290519743}
   - component: {fileID: 290519746}
-  - component: {fileID: 290519745}
   m_Layer: 3
   m_Name: Square (37)
   m_TagString: Floor
