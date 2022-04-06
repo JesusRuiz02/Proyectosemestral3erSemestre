@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -6,6 +5,7 @@ public class ActivateWall : MonoBehaviour
 {
     [SerializeField] private bool _isMinibossDeath = false;
     [SerializeField] private GameObject _miniboss = default;
+
     void Update()
     {
         if (_isMinibossDeath)

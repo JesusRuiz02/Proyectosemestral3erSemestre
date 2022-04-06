@@ -9,8 +9,8 @@ TagManager:
   - Weapon
   - MovingFloor
   - Melee
-  - MiniBoss
   - Miniboss
+  - DoubleJump
   layers:
   - Default
   - TransparentFX

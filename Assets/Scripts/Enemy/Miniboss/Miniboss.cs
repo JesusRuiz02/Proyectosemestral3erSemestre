@@ -14,12 +14,13 @@ public class Miniboss : MonoBehaviour
     [SerializeField] private Rigidbody2D _enemyRigidbody2D = default;
     [SerializeField] private GameObject _projectile = default;
     [SerializeField] private float _timer = 0f;
-    [SerializeField] private float _maxtimer = 15f;
+    [SerializeField] private float _maxtimer = 13f;
     [SerializeField] private Transform _firepoint = default;
     [SerializeField] private Transform _firepoint2 = default;
     [SerializeField] private Transform _firepoint3 = default;
     [SerializeField] private Transform _firepoint4 = default;
     [SerializeField] private GameObject _bullets = default;
+    [SerializeField] private int _randomStatePicker = 5;
 
     [SerializeField] private DoTweenType _doTweenType = DoTweenType.MovementOfLaser;
     [SerializeField] private Vector3[] _pathvalue = new Vector3[3];
@@ -47,26 +48,30 @@ public class Miniboss : MonoBehaviour
 
     private void RandomStatePicker()
     {
-        int randomStatePicker = Random.Range(0,4);
-        if (randomStatePicker == 0)
+         _randomStatePicker = Random.Range(0,4);
+        if (_randomStatePicker == 0)
         {
             AttackToCorners();
             _maxtimer = 7f;
         }
-        else if (randomStatePicker == 1)
+        else if (_randomStatePicker == 1)
         {
             LaserAttack();
             _maxtimer = 5f;
         }
-        else if (randomStatePicker == 2)
+        else if (_randomStatePicker == 2)
         { 
             AttackLeftRight();
             _maxtimer = 7f;
         }
-        else if (randomStatePicker == 3)
+        else if (_randomStatePicker == 3)
         {
             Rotate();
             _maxtimer = 6f;
+        }
+        else
+        {
+            
         }
     }
 

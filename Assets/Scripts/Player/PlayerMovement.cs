@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -65,6 +66,14 @@ public class PlayerMovement : MonoBehaviour
         if (collider.gameObject.tag == FLOOR_TAG || collider.gameObject.tag == MOVING_FLOOR_TAG)
         {
             _jumps = _basejumps;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (CompareTag("DoubleJump"))
+        {
+            _basejumps = 2;
         }
     }
 
