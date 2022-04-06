@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a3747632-0b1d-438b-a0dd-6f81d5b2f797" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyectosemestral3erSemestre/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyectosemestral3erSemestre/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Miniboss/Miniboss.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Miniboss/Miniboss.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelPhysics/ActivateWall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelPhysics/ActivateWall.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +149,7 @@
       <workItem from="1649019542926" duration="2270000" />
       <workItem from="1649030953108" duration="9281000" />
       <workItem from="1649074883730" duration="2457000" />
-      <workItem from="1649204082107" duration="1532000" />
+      <workItem from="1649204082107" duration="2566000" />
     </task>
     <servers />
   </component>
