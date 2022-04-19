@@ -31,7 +31,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.CompareTag("Enemy") && !_isInmune || collider.CompareTag("MiniBoss") && !_isInmune)
+        if (collider.CompareTag("Enemy") && !_isInmune || collider.CompareTag("Miniboss") && !_isInmune)
         {
             _currentHealth -= collider.GetComponent<Enemy>().DamageToGive;
             StartCoroutine(Inmunity(2, _blinkingtime));
