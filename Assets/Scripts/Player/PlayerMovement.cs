@@ -5,6 +5,7 @@ public class PlayerMovement : MonoBehaviour
 {
     private const string FLOOR_TAG = "Floor";
     private const string MOVING_FLOOR_TAG = "MovingFloor";
+    private const string DOUBLE_JUMP = "DoubleJump";
     private bool _facingRight = true;
     private float _velocityX = default;
     [SerializeField] private float _speed = 3;
@@ -14,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private int _jumps = 2;
     [SerializeField] private int _basejumps = 2;
     private Animator _animator;
+  
 
     private void Awake()
     {
@@ -67,16 +69,12 @@ public class PlayerMovement : MonoBehaviour
         {
             _jumps = _basejumps;
         }
-    }
-
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if (CompareTag("DoubleJump"))
+        if (collider.gameObject.tag==DOUBLE_JUMP)
         {
             _basejumps = 2;
         }
     }
-
+    
     private void Movement()
     {
         _velocityX = Input.GetAxis("Horizontal");
