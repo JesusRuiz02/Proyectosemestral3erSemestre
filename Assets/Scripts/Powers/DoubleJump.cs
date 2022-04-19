@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class DoubleJump : MonoBehaviour
 {
+    
     private const string PLAYER = "Player";
     private Rigidbody2D _rigidbody2D = null;
     void Start()
@@ -14,6 +15,6 @@ public class DoubleJump : MonoBehaviour
         {
             Destroy(gameObject);
         }
-   
     }
 }
+

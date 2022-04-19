@@ -74,12 +74,7 @@ public class PlayerMovement : MonoBehaviour
             _basejumps = 2;
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-
-    }
-
+    
     private void Movement()
     {
         _velocityX = Input.GetAxis("Horizontal");
