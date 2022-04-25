@@ -160,6 +160,7 @@ MonoBehaviour:
   _rigidbody2D: {fileID: 106777555}
   _knockBackForceX: 0
   _knockBackForceY: 0
+  _particle: {fileID: 2873864953951500813, guid: 12aa4f0594e0f134f92bf4573925fb60, type: 3}
 --- !u!114 &106777550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -667,6 +668,7 @@ MonoBehaviour:
   _rigidbody2D: {fileID: 171904629}
   _knockBackForceX: 0
   _knockBackForceY: 0
+  _particle: {fileID: 2873864953951500813, guid: 12aa4f0594e0f134f92bf4573925fb60, type: 3}
 --- !u!114 &171904624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1223,6 +1225,7 @@ MonoBehaviour:
   _rigidbody2D: {fileID: 265415159}
   _knockBackForceX: 0
   _knockBackForceY: 0
+  _particle: {fileID: 0}
 --- !u!1 &290519741
 GameObject:
   m_ObjectHideFlags: 0
@@ -2554,6 +2557,7 @@ MonoBehaviour:
   _rigidbody2D: {fileID: 473418548}
   _knockBackForceX: 300
   _knockBackForceY: 200
+  _particle: {fileID: 2873864953951500813, guid: 12aa4f0594e0f134f92bf4573925fb60, type: 3}
 --- !u!70 &473418547
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -3775,6 +3779,7 @@ MonoBehaviour:
   _rigidbody2D: {fileID: 0}
   _knockBackForceX: 300
   _knockBackForceY: 200
+  _particle: {fileID: 2873864953951500813, guid: 12aa4f0594e0f134f92bf4573925fb60, type: 3}
 --- !u!70 &765083024
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -4158,6 +4163,7 @@ MonoBehaviour:
   _rigidbody2D: {fileID: 823884314}
   _knockBackForceX: 300
   _knockBackForceY: 200
+  _particle: {fileID: 2873864953951500813, guid: 12aa4f0594e0f134f92bf4573925fb60, type: 3}
 --- !u!70 &823884313
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -8707,6 +8713,7 @@ MonoBehaviour:
   _rigidbody2D: {fileID: 2032557350}
   _knockBackForceX: 0
   _knockBackForceY: 0
+  _particle: {fileID: 2873864953951500813, guid: 12aa4f0594e0f134f92bf4573925fb60, type: 3}
 --- !u!114 &2032557352
 MonoBehaviour:
   m_ObjectHideFlags: 0
