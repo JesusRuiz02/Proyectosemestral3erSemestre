@@ -14,12 +14,13 @@ public class Miniboss : MonoBehaviour
     [SerializeField] private Rigidbody2D _enemyRigidbody2D = default;
     [SerializeField] private GameObject _projectile = default;
     [SerializeField] private float _timer = 0f;
-    [SerializeField] private float _maxtimer = 15f;
+    [SerializeField] private float _maxtimer = 13f;
     [SerializeField] private Transform _firepoint = default;
     [SerializeField] private Transform _firepoint2 = default;
     [SerializeField] private Transform _firepoint3 = default;
     [SerializeField] private Transform _firepoint4 = default;
     [SerializeField] private GameObject _bullets = default;
+    [SerializeField] private int _randomStatePicker = 5;
 
     [SerializeField] private DoTweenType _doTweenType = DoTweenType.MovementOfLaser;
     [SerializeField] private Vector3[] _pathvalue = new Vector3[3];
@@ -47,26 +48,30 @@ public class Miniboss : MonoBehaviour
 
     private void RandomStatePicker()
     {
-        int randomStatePicker = Random.Range(0,4);
-        if (randomStatePicker == 0)
+         _randomStatePicker = Random.Range(0,4);
+        if (_randomStatePicker == 0)
         {
             AttackToCorners();
-            _maxtimer = 10f;
+            _maxtimer = 7f;
         }
-        else if (randomStatePicker == 1)
+        else if (_randomStatePicker == 1)
         {
             LaserAttack();
             _maxtimer = 5f;
         }
-        else if (randomStatePicker == 2)
+        else if (_randomStatePicker == 2)
         { 
             AttackLeftRight();
-            _maxtimer = 8f;
+            _maxtimer = 7f;
         }
-        else if (randomStatePicker == 3)
+        else if (_randomStatePicker == 3)
         {
             Rotate();
-            _maxtimer = 7f;
+            _maxtimer = 6f;
+        }
+        else
+        {
+            
         }
     }
 
@@ -93,7 +98,7 @@ public class Miniboss : MonoBehaviour
         Vector3 originalLocation = transform.position;
         DOTween.Sequence()
             .Append(transform.DOMove(_targetLocation, 2f).SetEase(_moveEase))
-            .Append(transform.DOMove(_targetsecondLocation, _moveDuration).SetEase(_moveEase).SetDelay(1.5f))
+            .Append(transform.DOMove(_targetsecondLocation, _moveDuration).SetEase(_moveEase).SetDelay(1f))
             .Append(transform.DOMove(_targetLocation, _moveDuration).SetEase(_moveEase))
             .Append(transform.DOMove(originalLocation, _moveDuration).SetEase(_moveEase));
         _timer = 0;
@@ -109,21 +114,21 @@ public class Miniboss : MonoBehaviour
         }
         Vector3 originalLocation = transform.position;
         DOTween.Sequence()
-            .Append(transform.DOPath(_pathvalue , 10f, PathType.Linear , PathMode.Sidescroller2D, 10, Color.blue));
+            .Append(transform.DOPath(_pathvalue , 7f, PathType.Linear , PathMode.Sidescroller2D, 10, Color.blue));
         _timer = 0;
     }
 
     private void Rotate()
     {
         CancelInvoke("CreateLaserAttack");
-        transform.DORotate(new Vector3(0, 0, 720), 6, RotateMode.FastBeyond360);
+        transform.DORotate(new Vector3(0, 0, 720), 5, RotateMode.FastBeyond360);
         RepeatProjectiles();
         _timer = 0;
     }
 
     private void RepeatProjectiles()
     {
-        InvokeRepeating("CreateProjectiles",0,2f);
+        InvokeRepeating("CreateProjectiles",0,1.5f);
     }
     
     private void CreateProjectiles()

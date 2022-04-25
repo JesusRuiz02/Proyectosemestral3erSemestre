@@ -74,6 +74,6 @@ public class EnemyMovement : MonoBehaviour
     private void Flip()
     {
         _walksRight = !_walksRight;
-        transform.localScale *= new Vector2(-1, transform.localScale.y);
+        transform.Rotate(0f, 180f, 0f);
     }
 }
