@@ -6,6 +6,7 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private Rigidbody2D _rigidbody2D = default;
     [SerializeField] private float _knockBackForceX = 200;
     [SerializeField] private float _knockBackForceY = 100;
+    [SerializeField] private GameObject _particle = default;
 
     private void Start()
     {
@@ -23,6 +24,7 @@ public class EnemyHealth : MonoBehaviour
         if (collider.CompareTag("Melee"))
         {
             _enemy.ReduceHealth(collider.GetComponent<MeleeWeapon>().MeleeDamage);
+            Instantiate(_particle, transform.position, Quaternion.identity);
             if (collider.transform.position.x > transform.position.x)
             {
                 _rigidbody2D.AddForce(new Vector2(-_knockBackForceX,_knockBackForceY), ForceMode2D.Force);
