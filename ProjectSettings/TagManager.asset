@@ -12,7 +12,7 @@ TagManager:
   - Miniboss
   - DoubleJump
   - MiniBoss
-  - DJump
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
