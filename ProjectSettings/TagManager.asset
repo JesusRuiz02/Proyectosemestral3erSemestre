@@ -11,6 +11,8 @@ TagManager:
   - Melee
   - Miniboss
   - DoubleJump
+  - MiniBoss
+  - DJump
   layers:
   - Default
   - TransparentFX
