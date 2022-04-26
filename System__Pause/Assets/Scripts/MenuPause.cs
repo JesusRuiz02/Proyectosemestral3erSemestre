@@ -11,16 +11,5 @@ public class MenuPause : MonoBehaviour
         Time.timeScale = 0f;
         ButtonPause.SetActive(true);
         menuPause.SetActive(true);
-
-    }
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
     }
 }
