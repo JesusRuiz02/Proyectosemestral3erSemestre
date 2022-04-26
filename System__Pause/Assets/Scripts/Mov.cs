@@ -5,11 +5,6 @@ public class Mov : MonoBehaviour
     [SerializeField] float velocity = 5f;
     [SerializeField] float velocity2 = 7f;
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         if (Input.GetKey(KeyCode.LeftArrow)|| Input.GetKey("a"))
