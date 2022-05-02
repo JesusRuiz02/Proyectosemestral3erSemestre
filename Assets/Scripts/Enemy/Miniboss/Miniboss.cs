@@ -21,7 +21,6 @@ public class Miniboss : MonoBehaviour
     [SerializeField] private Transform _firepoint4 = default;
     [SerializeField] private GameObject _bullets = default;
     [SerializeField] private int _randomStatePicker = 5;
-
     [SerializeField] private DoTweenType _doTweenType = DoTweenType.MovementOfLaser;
     [SerializeField] private Vector3[] _pathvalue = new Vector3[3];
     private enum DoTweenType
@@ -68,10 +67,6 @@ public class Miniboss : MonoBehaviour
         {
             Rotate();
             _maxtimer = 6f;
-        }
-        else
-        {
-            
         }
     }
 

@@ -35,7 +35,6 @@ public class PlayerHealth : MonoBehaviour
         {
             _currentHealth -= collider.GetComponent<Enemy>().DamageToGive;
             StartCoroutine(Inmunity(2, _blinkingtime));
-
             if (collider.transform.position.x > transform.position.x)
             {
                 _rigidbody2D.AddForce(new Vector2(-_knockbackForceX, _knockbackForceY), ForceMode2D.Force);

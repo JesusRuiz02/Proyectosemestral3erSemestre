@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class MagicBullet : MonoBehaviour
@@ -15,6 +16,10 @@ public class MagicBullet : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
+    {
+        Destroy(gameObject);
+    }
+    private void OnCollisionEnter2D(Collision2D col)
     {
         Destroy(gameObject);
     }
