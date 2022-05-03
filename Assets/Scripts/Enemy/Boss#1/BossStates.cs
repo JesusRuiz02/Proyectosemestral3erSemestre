@@ -62,6 +62,7 @@ public class BossStates : MonoBehaviour
         _pathvalue[1] = target;
         _pathvalue[2] = _targetLocation;
         sequence.Append(transform.DOPath(_pathvalue, 5f, PathType.Linear, PathMode.Sidescroller2D ,10,Color.red).SetDelay(2f));
+        sequence.AppendCallback(RandomStatePicker);
     }
 
     private void Smash()
@@ -71,6 +72,7 @@ public class BossStates : MonoBehaviour
         sequence.Append(transform.DOMove(_middlescreen, 2f).SetEase(Ease.Flash));
         sequence.Append(transform.DOMove(_smashpoint, 0.1f).SetEase(Ease.Linear).SetDelay(1f));
         RepeatSmashInvoke();
+        sequence.AppendCallback(RandomStatePicker);
     }
 
     private void CreateSmashCollider()
@@ -84,7 +86,14 @@ public class BossStates : MonoBehaviour
     {
         InvokeRepeating("CreateSmashCollider", 3.1f, 400f);
     }
-    
+
+    private void ThrowingSpores()
+    {
+        _targetLocation = transform.position;
+        var sequence = DOTween.Sequence();
+        sequence.Append(transform.DOMove(_smashpoint, 1f)).SetEase(Ease.Linear);
+        
+    }
 
     private void Update()
     {

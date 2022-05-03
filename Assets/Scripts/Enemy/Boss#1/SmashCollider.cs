@@ -15,7 +15,7 @@ public class SmashCollider : MonoBehaviour
         var target = _direction ? Vector2.right : Vector2.left;
         _rigidbody2D.AddForce(target * _power, ForceMode2D.Force);
     }
-
+    
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (CompareTag("Floor"))
