@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Shoot : MonoBehaviour
+public class Mini_Plant_Shoot : MonoBehaviour
 {
     public Transform Player_pos;
 
