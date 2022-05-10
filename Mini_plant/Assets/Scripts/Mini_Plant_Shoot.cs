@@ -6,7 +6,7 @@ public class Mini_Plant_Shoot : MonoBehaviour
 
     public Transform Instance_point;
     public GameObject Bullet;
-    private float time;
+    [SerializeField] float time;
 
     void Update()
     {
