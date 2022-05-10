@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3747632-0b1d-438b-a0dd-6f81d5b2f797" name="Default Changelist" comment="" />
+    <list default="true" id="a3747632-0b1d-438b-a0dd-6f81d5b2f797" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyectosemestral3erSemestre/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyectosemestral3erSemestre/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Boss#1/BossStates.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Boss#1/BossStates.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Boss#1/SmashCollider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Boss#1/SmashCollider.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -137,6 +142,20 @@
       <workItem from="1649204082107" duration="2566000" />
       <workItem from="1650371786571" duration="2689000" />
       <workItem from="1650748821461" duration="862000" />
+      <workItem from="1650975743362" duration="5287000" />
+      <workItem from="1651441345880" duration="6056000" />
+      <workItem from="1651468474015" duration="5936000" />
+      <workItem from="1651541714946" duration="59000" />
+      <workItem from="1651544159757" duration="7000" />
+      <workItem from="1651581398856" duration="4667000" />
+      <workItem from="1651878353583" duration="1165000" />
+      <workItem from="1651939735769" duration="518000" />
+      <workItem from="1651945716157" duration="641000" />
+      <workItem from="1651949990061" duration="786000" />
+      <workItem from="1652084274461" duration="1958000" />
+      <workItem from="1652150391679" duration="1022000" />
+      <workItem from="1652167163056" duration="817000" />
+      <workItem from="1652186000932" duration="3544000" />
     </task>
     <servers />
   </component>
