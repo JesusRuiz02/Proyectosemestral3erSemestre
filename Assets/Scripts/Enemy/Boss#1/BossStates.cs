@@ -51,6 +51,7 @@ public class BossStates : MonoBehaviour
         {
             AttackPlayer();
         }
+        
     }
 
     private IEnumerator WhipAttack()
