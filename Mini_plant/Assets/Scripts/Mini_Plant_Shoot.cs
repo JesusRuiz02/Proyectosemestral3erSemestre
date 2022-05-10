@@ -2,11 +2,10 @@ using UnityEngine;
 
 public class Mini_Plant_Shoot : MonoBehaviour
 {
-    public Transform Player_pos;
-
-    public Transform Instance_point;
-    public GameObject Bullet;
-    [SerializeField] float time;
+    [SerializeField] public Transform Player_pos;
+    [SerializeField] public Transform Instance_point;
+    [SerializeField] public GameObject Bullet;
+    [SerializeField] private float time;
 
     void Update()
     {
