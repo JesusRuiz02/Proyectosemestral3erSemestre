@@ -13,6 +13,7 @@ public class BossStates : MonoBehaviour
     [SerializeField] private bool _facingRight = true;
     [Header("GameObjects")]
     [SerializeField] private GameObject _whipCollider = default;
+    [SerializeField] private GameObject _whipCollider2 = default;
     [SerializeField] private GameObject _targetPlayer = default;
     [SerializeField] private GameObject _smashColliderRight = default;
     [SerializeField] private GameObject _smashColliderLeft = default;
@@ -45,19 +46,24 @@ public class BossStates : MonoBehaviour
         }
         else if (_randomState == 0)
         {
-            Smash();
+            StartCoroutine(ThrowingSpore());
         }
         else if (_randomState == 2)
         {
-            AttackPlayer();
+            StartCoroutine(ThrowingSpore());
         }
         
     }
 
     private IEnumerator WhipAttack()
     {
+        var WhipCollider = transform.position.x > _targetPlayer.transform.position.x ? _whipCollider : _whipCollider2;
+        var ROTATION = transform.position.x > _targetPlayer.transform.position.x ? 90 : -90;
+        var sequence = DOTween.Sequence();
         yield return new WaitForSeconds(2f);
-        _whipCollider.SetActive(true);
+        WhipCollider.SetActive(true);
+        sequence.Append(WhipCollider.transform.DORotate(new Vector3(0, 0, ROTATION), 2, RotateMode.FastBeyond360));
+        sequence.AppendCallback(RandomStatePicker);
     }
 
     private void AttackPlayer()
@@ -102,7 +108,7 @@ public class BossStates : MonoBehaviour
         var sequence = DOTween.Sequence();
         sequence.Append(transform.DOMove(_smashpoint, 1f)).SetEase(Ease.Linear);
         yield return new WaitForSeconds(2f);
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 5; i++)
         {
             var newSpore = Instantiate(_spores,firepoints[i].position , firepoints[i].rotation);
             newSpore.GetComponent<Rigidbody2D>().AddForce(firepoints[i].right *  _power, ForceMode2D.Impulse);
