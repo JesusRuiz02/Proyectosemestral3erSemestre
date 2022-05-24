@@ -76,7 +76,7 @@ public class BossStates : MonoBehaviour
         _pathvalue[0] = targetToAttack;
         _pathvalue[1] = target;
         _pathvalue[2] = _targetLocation;
-        sequence.Append(transform.DOPath(_pathvalue, 5f, PathType.Linear, PathMode.Sidescroller2D ,10,Color.red).SetDelay(2f));
+        sequence.Append(transform.DOPath(_pathvalue, 5f, PathType.Linear, PathMode.Sidescroller2D ,10,Color.red).SetDelay(1f));
         sequence.AppendCallback(RandomStatePicker);
     }
 
@@ -84,7 +84,7 @@ public class BossStates : MonoBehaviour
     {
         _targetLocation = transform.position;
         var sequence = DOTween.Sequence();
-        sequence.Append(transform.DOMove(_middlescreen, 2f).SetEase(Ease.Flash));
+        sequence.Append(transform.DOMove(_middlescreen, 2f).SetEase(Ease.Flash)).SetDelay(1f);
         sequence.Append(transform.DOMove(_smashpoint, 0.1f).SetEase(Ease.Linear).SetDelay(1f));
         RepeatSmashInvoke();
         sequence.AppendCallback(RandomStatePicker);
@@ -99,7 +99,7 @@ public class BossStates : MonoBehaviour
 
     private void RepeatSmashInvoke()
     {
-        InvokeRepeating("CreateSmashCollider", 3.1f, 400f);
+        InvokeRepeating("CreateSmashCollider", 4.1f, 400f);
     }
 
     private IEnumerator ThrowingSpore()
@@ -108,7 +108,7 @@ public class BossStates : MonoBehaviour
         var sequence = DOTween.Sequence();
         sequence.Append(transform.DOMove(_smashpoint, 1f)).SetEase(Ease.Linear);
         yield return new WaitForSeconds(2f);
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 6; i++)
         {
             var newSpore = Instantiate(_spores,firepoints[i].position , firepoints[i].rotation);
             newSpore.GetComponent<Rigidbody2D>().AddForce(firepoints[i].right *  _power, ForceMode2D.Impulse);
