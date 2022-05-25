@@ -30,6 +30,8 @@ public class BossStates : MonoBehaviour
     [SerializeField] private Vector2 _targetCorner1 = default; 
     [SerializeField] private Vector2 _targetCorner2 = default;
     [SerializeField] private Transform[] firepoints;
+    [SerializeField] private Transform[] decayingPoints;
+    
 
     void Start()
     {
@@ -39,6 +41,8 @@ public class BossStates : MonoBehaviour
 
     private void RandomStatePicker()
     {
+        CancelInvoke("RepeatSmashInvoke");
+        CancelInvoke("DecayingSpores");
         _randomState = Random.Range(0, 3);
         if (_randomState == 1)
         {
@@ -102,6 +106,18 @@ public class BossStates : MonoBehaviour
         InvokeRepeating("CreateSmashCollider", 4.1f, 400f);
     }
 
+    private void DecayingSpores()
+    {
+        InvokeRepeating("InstantiatesSpores",1.5f, 400f);
+    }
+
+    private void InstantiatesSpores()
+    {
+        for (int i = 0; i < 6; i++)
+        {
+            Instantiate(_spores, decayingPoints[i].position, decayingPoints[i].rotation);
+        }
+    }
     private IEnumerator ThrowingSpore()
     {
         _targetLocation = transform.position;
@@ -110,10 +126,12 @@ public class BossStates : MonoBehaviour
         yield return new WaitForSeconds(2f);
         for (int i = 0; i < 6; i++)
         {
-            var newSpore = Instantiate(_spores,firepoints[i].position , firepoints[i].rotation);
-            newSpore.GetComponent<Rigidbody2D>().AddForce(firepoints[i].right *  _power, ForceMode2D.Impulse);
+            var newSpore = Instantiate(_spores, firepoints[i].position, firepoints[i].rotation);
+            newSpore.GetComponent<Rigidbody2D>().AddForce(firepoints[i].right * _power, ForceMode2D.Impulse);
         }
+        DecayingSpores();
         RandomStatePicker();
+
     }
 
     private void FixedUpdate()
