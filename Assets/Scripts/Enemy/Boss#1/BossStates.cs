@@ -46,15 +46,15 @@ public class BossStates : MonoBehaviour
         _randomState = Random.Range(0, 3);
         if (_randomState == 1)
         {
-            StartCoroutine(ThrowingSpore());
+            Smash();
         }
         else if (_randomState == 0)
         {
-            StartCoroutine(ThrowingSpore());
+            Smash();
         }
         else if (_randomState == 2)
         {
-            StartCoroutine(ThrowingSpore());
+            Smash();
         }
         
     }
@@ -89,7 +89,9 @@ public class BossStates : MonoBehaviour
         _targetLocation = transform.position;
         var sequence = DOTween.Sequence();
         sequence.Append(transform.DOMove(_middlescreen, 2f).SetEase(Ease.Flash)).SetDelay(1f);
-        sequence.Append(transform.DOMove(_smashpoint, 0.1f).SetEase(Ease.Linear).SetDelay(1f));
+        sequence.Append(transform.DOShakePosition(1.5f, new Vector3(0.4f, 0.1f),10,90,false,true));
+        sequence.Append(transform.DOMove(_smashpoint, 0.1f).SetEase(Ease.Linear));
+        sequence.Append(transform.DOPunchScale( new Vector3(0.5f, 0.1f, 1), 1f, 2, 0.5f));
         RepeatSmashInvoke();
         sequence.AppendCallback(RandomStatePicker);
     }
@@ -103,7 +105,7 @@ public class BossStates : MonoBehaviour
 
     private void RepeatSmashInvoke()
     {
-        InvokeRepeating("CreateSmashCollider", 4.1f, 400f);
+        InvokeRepeating("CreateSmashCollider", 4.6f, 400f);
     }
 
     private void DecayingSpores()
