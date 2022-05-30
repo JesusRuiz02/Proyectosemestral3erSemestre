@@ -13,6 +13,7 @@ public class BossStates : MonoBehaviour
     [SerializeField] private bool _facingRight = true;
     [Header("GameObjects")]
     [SerializeField] private GameObject _whipCollider = default;
+    [SerializeField] private GameObject _whipCollider2 = default;
     [SerializeField] private GameObject _targetPlayer = default;
     [SerializeField] private GameObject _smashColliderRight = default;
     [SerializeField] private GameObject _smashColliderLeft = default;
@@ -29,7 +30,8 @@ public class BossStates : MonoBehaviour
     [SerializeField] private Vector2 _targetCorner1 = default; 
     [SerializeField] private Vector2 _targetCorner2 = default;
     [SerializeField] private Transform[] firepoints;
-
+    [SerializeField] private Transform[] decayingPoints;
+    
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -38,26 +40,33 @@ public class BossStates : MonoBehaviour
 
     private void RandomStatePicker()
     {
+        CancelInvoke("RepeatSmashInvoke");
+        CancelInvoke("DecayingSpores");
         _randomState = Random.Range(0, 3);
         if (_randomState == 1)
         {
-            StartCoroutine(ThrowingSpore());
+            Smash();
         }
         else if (_randomState == 0)
         {
-            Smash();
+            AttackPlayer();
         }
         else if (_randomState == 2)
         {
-            AttackPlayer();
+            StartCoroutine(ThrowingSpore());
         }
         
     }
 
     private IEnumerator WhipAttack()
     {
+        var WhipCollider = transform.position.x > _targetPlayer.transform.position.x ? _whipCollider : _whipCollider2;
+        var ROTATION = transform.position.x > _targetPlayer.transform.position.x ? 90 : -90;
+        var sequence = DOTween.Sequence();
         yield return new WaitForSeconds(2f);
-        _whipCollider.SetActive(true);
+        WhipCollider.SetActive(true);
+        sequence.Append(WhipCollider.transform.DORotate(new Vector3(0, 0, ROTATION), 2, RotateMode.FastBeyond360));
+        sequence.AppendCallback(RandomStatePicker);
     }
 
     private void AttackPlayer()
@@ -70,7 +79,7 @@ public class BossStates : MonoBehaviour
         _pathvalue[0] = targetToAttack;
         _pathvalue[1] = target;
         _pathvalue[2] = _targetLocation;
-        sequence.Append(transform.DOPath(_pathvalue, 5f, PathType.Linear, PathMode.Sidescroller2D ,10,Color.red).SetDelay(2f));
+        sequence.Append(transform.DOPath(_pathvalue, 5f, PathType.Linear, PathMode.Sidescroller2D ,10,Color.red).SetDelay(1f));
         sequence.AppendCallback(RandomStatePicker);
     }
 
@@ -78,8 +87,10 @@ public class BossStates : MonoBehaviour
     {
         _targetLocation = transform.position;
         var sequence = DOTween.Sequence();
-        sequence.Append(transform.DOMove(_middlescreen, 2f).SetEase(Ease.Flash));
-        sequence.Append(transform.DOMove(_smashpoint, 0.1f).SetEase(Ease.Linear).SetDelay(1f));
+        sequence.Append(transform.DOMove(_middlescreen, 2f).SetEase(Ease.Flash)).SetDelay(1f);
+        sequence.Append(transform.DOShakePosition(1.5f, new Vector3(0.4f, 0.1f),10,90,false,true));
+        sequence.Append(transform.DOMove(_smashpoint, 0.1f).SetEase(Ease.Linear));
+        sequence.Append(transform.DOPunchScale( new Vector3(0.5f, 0.1f, 1), 1f, 2, 0.5f));
         RepeatSmashInvoke();
         sequence.AppendCallback(RandomStatePicker);
     }
@@ -93,21 +104,32 @@ public class BossStates : MonoBehaviour
 
     private void RepeatSmashInvoke()
     {
-        InvokeRepeating("CreateSmashCollider", 3.1f, 400f);
+        InvokeRepeating("CreateSmashCollider", 4.6f, 400f);
     }
 
+    private void DecayingSpores()
+    {
+        InvokeRepeating("InstantiatesSpores",1.5f, 400f);
+    }
+
+    private void InstantiatesSpores()
+    {
+        for (int i = 0; i < 6; i++)
+        {
+            Instantiate(_spores, decayingPoints[i].position, decayingPoints[i].rotation);
+        }
+    }
     private IEnumerator ThrowingSpore()
     {
         _targetLocation = transform.position;
         var sequence = DOTween.Sequence();
         sequence.Append(transform.DOMove(_smashpoint, 1f)).SetEase(Ease.Linear);
         yield return new WaitForSeconds(2f);
-        for (int i = 0; i < 3; i++)
-        {
-            var newSpore = Instantiate(_spores,firepoints[i].position , firepoints[i].rotation);
-            newSpore.GetComponent<Rigidbody2D>().AddForce(firepoints[i].right *  _power, ForceMode2D.Impulse);
-        }
+        var newSpore = Instantiate(_spores, firepoints[0].position, firepoints[0].rotation);
+        newSpore.GetComponent<Rigidbody2D>().AddForce(firepoints[0].right * _power, ForceMode2D.Impulse);
+        DecayingSpores();
         RandomStatePicker();
+
     }
 
     private void FixedUpdate()
