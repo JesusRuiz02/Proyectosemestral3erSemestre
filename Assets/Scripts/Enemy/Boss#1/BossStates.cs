@@ -124,11 +124,8 @@ public class BossStates : MonoBehaviour
         var sequence = DOTween.Sequence();
         sequence.Append(transform.DOMove(_smashpoint, 1f)).SetEase(Ease.Linear);
         yield return new WaitForSeconds(2f);
-        for (int i = 0; i < 6; i++)
-        {
-            var newSpore = Instantiate(_spores, firepoints[i].position, firepoints[i].rotation);
-            newSpore.GetComponent<Rigidbody2D>().AddForce(firepoints[i].right * _power, ForceMode2D.Impulse);
-        }
+        var newSpore = Instantiate(_spores, firepoints[0].position, firepoints[0].rotation);
+        newSpore.GetComponent<Rigidbody2D>().AddForce(firepoints[0].right * _power, ForceMode2D.Impulse);
         DecayingSpores();
         RandomStatePicker();
 
