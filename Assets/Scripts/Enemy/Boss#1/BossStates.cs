@@ -20,7 +20,6 @@ public class BossStates : MonoBehaviour
     [SerializeField] private GameObject _particle = default;
     [SerializeField] private GameObject _spores = default;
     
-    
     [Header("Vectors")]
     [SerializeField] private Vector3[] _pathvalue = new Vector3[3];
     [SerializeField] private Vector3 targetToAttack = Vector3.zero;
