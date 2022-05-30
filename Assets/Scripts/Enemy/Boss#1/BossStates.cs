@@ -50,11 +50,11 @@ public class BossStates : MonoBehaviour
         }
         else if (_randomState == 0)
         {
-            Smash();
+            AttackPlayer();
         }
         else if (_randomState == 2)
         {
-            Smash();
+            StartCoroutine(ThrowingSpore());
         }
         
     }
