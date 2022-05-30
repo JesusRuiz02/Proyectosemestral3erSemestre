@@ -32,7 +32,6 @@ public class BossStates : MonoBehaviour
     [SerializeField] private Transform[] firepoints;
     [SerializeField] private Transform[] decayingPoints;
     
-
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
