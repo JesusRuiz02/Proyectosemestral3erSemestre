@@ -77,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
     
     private void Movement()
     {
-        _velocityX = Input.GetAxis("Horizontal");
+        _velocityX = Input.GetAxisRaw("Horizontal");
         _velocityY = _rigidbody2D.velocity.y;
         _rigidbody2D.velocity = new Vector2(_velocityX * _speed, _velocityY);
         if (_velocityX!=0) _animator.SetBool("Run", true);
