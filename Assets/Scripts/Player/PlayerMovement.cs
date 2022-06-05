@@ -5,7 +5,7 @@ public class PlayerMovement : MonoBehaviour
 {
     private const string FLOOR_TAG = "Floor";
     private const string MOVING_FLOOR_TAG = "MovingFloor";
-    private const string DOUBLE_JUMP = "DoubleJump";
+    private const string DOUBLE_JUMP = "DJ";
     private bool _facingRight = true;
     private float _velocityX = default;
     [SerializeField] private float _speed = 3;
