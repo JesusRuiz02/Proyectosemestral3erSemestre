@@ -69,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
         {
             _jumps = _basejumps;
         }
-        if (collider.gameObject.tag==DOUBLE_JUMP)
+        if (collider.gameObject.tag == DOUBLE_JUMP)
         {
             _basejumps = 2;
         }
