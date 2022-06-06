@@ -5,7 +5,7 @@ public class PlayerMovement : MonoBehaviour
 {
     private const string FLOOR_TAG = "Floor";
     private const string MOVING_FLOOR_TAG = "MovingFloor";
-    private const string DOUBLE_JUMP = "DoubleJump";
+    private const string DOUBLE_JUMP = "DJ";
     private bool _facingRight = true;
     private float _velocityX = default;
     [SerializeField] private float _speed = 3;
@@ -69,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
         {
             _jumps = _basejumps;
         }
-        if (collider.gameObject.tag==DOUBLE_JUMP)
+        if (collider.gameObject.tag == DOUBLE_JUMP)
         {
             _basejumps = 2;
         }
@@ -77,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
     
     private void Movement()
     {
-        _velocityX = Input.GetAxis("Horizontal");
+        _velocityX = Input.GetAxisRaw("Horizontal");
         _velocityY = _rigidbody2D.velocity.y;
         _rigidbody2D.velocity = new Vector2(_velocityX * _speed, _velocityY);
         if (_velocityX!=0) _animator.SetBool("Run", true);
