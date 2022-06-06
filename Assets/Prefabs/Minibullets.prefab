@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1351865881572445848}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 21.686472, y: 9.873473, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidBody2D: {fileID: 1351865881572445854}
-  _speed: 120
+  _speed: 240
 --- !u!50 &1351865881572445854
 Rigidbody2D:
   serializedVersion: 4
@@ -137,6 +137,7 @@ MonoBehaviour:
   _speed: 0
   _damageToGive: 5
   _boost: 0
+  _bulletsAmount: 3
 --- !u!58 &3024499938952563935
 CircleCollider2D:
   m_ObjectHideFlags: 0

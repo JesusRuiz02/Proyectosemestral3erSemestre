@@ -14,11 +14,6 @@ public class MagicBullet : MonoBehaviour
     {
         transform.Translate(transform.right * bulletspeed * Time.deltaTime);
     }
-
-    private void OnTriggerEnter2D(Collider2D collider)
-    {
-        Destroy(gameObject);
-    }
     private void OnCollisionEnter2D(Collision2D col)
     {
         Destroy(gameObject);

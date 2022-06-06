@@ -124,16 +124,15 @@ public class Miniboss : MonoBehaviour
             sequence.Append(transform.DORotate(_pathvalueRotation[i], 0.01f));
             sequence.Append(transform.DOMove(_pathvalue[i], 1f).SetEase(_moveEase));
         }
-        sequence.Append(transform.DORotate(Vector3.zero, 0.01f));
+        sequence.Append(transform.DORotate(new Vector3(0,0,0), 0.01f));
         _timer = 0;
     }
 
     private void Rotate()
     {
-        CancelInvoke("CreateLaserAttack");
+        transform.DORotate(new Vector3(0, 0, 0), 0.01f);
         RepeatProjectiles();
-        transform.DORotate(new Vector3(0, 0, 720), 6, RotateMode.FastBeyond360);
-        
+        transform.DORotate(new Vector3(0, 0, 720), 6,RotateMode.FastBeyond360);
         _timer = 0;
     }
 
@@ -146,7 +145,7 @@ public class Miniboss : MonoBehaviour
 
     private void RepeatProjectiles()
     {
-        InvokeRepeating("CreateProjectiles",0,1.5f);
+        InvokeRepeating("CreateProjectiles",0,1f);
     }
     
     private void CreateProjectiles()
