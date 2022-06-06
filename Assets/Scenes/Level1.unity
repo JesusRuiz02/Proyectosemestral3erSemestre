@@ -746,7 +746,7 @@ MonoBehaviour:
   _speed: 2
   _damageToGive: 1
   _boost: 0
-  _bulletsAmount: 0
+  _bulletsAmount: 3
 --- !u!114 &106777551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1230,7 +1230,7 @@ MonoBehaviour:
   _speed: 2
   _damageToGive: 1
   _boost: 0
-  _bulletsAmount: 0
+  _bulletsAmount: 3
 --- !u!114 &171904625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13750,7 +13750,7 @@ MonoBehaviour:
   _playerbullet: {fileID: 4524033553269233673, guid: aab37664a9560154c97281651d2b78bf, type: 3}
   _mousePos: {x: 0, y: 0, z: 0}
   _mainCamera: {fileID: 0}
-  _bulletsAmount: 75
+  _bulletsAmount: 100
   _scoreText: {fileID: 504256500}
 --- !u!1 &1749514368
 GameObject:
