@@ -15,17 +15,18 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private int _jumps = 2;
     [SerializeField] private int _basejumps = 2;
     private Animator _animator;
-  
+    public bool Facing_right => _facingRight;
 
     private void Awake()
     {
         _animator = GetComponent<Animator>();
     }
+    
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
     }
-
+    
     void Update()
     {
         DirectionCharacter();
