@@ -53,8 +53,7 @@ public class PlayerMovement : MonoBehaviour
             Flip();
         }
     }
-
-
+    
     private void DoubleJump()
     {
         if (_jumps > 0)
