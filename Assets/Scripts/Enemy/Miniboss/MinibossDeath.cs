@@ -6,7 +6,6 @@ public class MinibossDeath : MonoBehaviour
     [SerializeField] private GameObject _miniboss = default;
     [SerializeField] private GameObject _firstWall = default;
     [SerializeField] private GameObject _secondWall = default;
-    [SerializeField] private GameObject _thirdWall = default;
     [SerializeField] private bool _MinibossIsActive = false;
     private void Update()
     {
@@ -31,6 +30,5 @@ public class MinibossDeath : MonoBehaviour
         _MinibossIsActive = false;
         _firstWall.GetComponent<ActivateWall>().DisableObject();
         _secondWall.AddComponent<ActivateWall>().DisableObject();
-        _thirdWall.AddComponent<ActivateWall>().DisableObject();
     }
 }

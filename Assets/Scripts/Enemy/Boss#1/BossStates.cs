@@ -78,7 +78,7 @@ public class BossStates : MonoBehaviour
         _pathvalue[0] = targetToAttack;
         _pathvalue[1] = target;
         _pathvalue[2] = _targetLocation;
-        sequence.Append(transform.DOPath(_pathvalue, 5f, PathType.Linear, PathMode.Sidescroller2D ,10,Color.red).SetDelay(1f));
+        sequence.Append(transform.DOPath(_pathvalue, 3f, PathType.Linear, PathMode.Sidescroller2D ,10,Color.red).SetDelay(1f));
         sequence.AppendCallback(RandomStatePicker);
     }
 

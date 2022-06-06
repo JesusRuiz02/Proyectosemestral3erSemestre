@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1622882611412367794}
   - component: {fileID: 3054325980879919148}
   - component: {fileID: 5959326061127250437}
+  - component: {fileID: 9116854548092706362}
   m_Layer: 0
   m_Name: Spores
   m_TagString: Enemy
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 7574729727225366927}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12.102397, y: 4.2730665, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: 9082429109045791810, guid: 58bb00a8a7e33e14da5bba6bd609e7ac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -139,6 +140,7 @@ MonoBehaviour:
   _speed: 0
   _damageToGive: 3
   _boost: 0
+  _bulletsAmount: 3
 --- !u!114 &5959326061127250437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,3 +153,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e22a50e8eac6c034586ba05f630b9ed8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &9116854548092706362
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7574729727225366927}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a1cd792bf740d4c4e8f2536cb51bf2b4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

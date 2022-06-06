@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1304182316326810877}
   - component: {fileID: 2066728903184593148}
   - component: {fileID: 7608399938484280760}
+  - component: {fileID: 8240243833196238073}
   m_Layer: 0
   m_Name: MagicBullet
   m_TagString: Enemy
@@ -130,3 +131,25 @@ MonoBehaviour:
   _speed: 0
   _damageToGive: 1
   _boost: 0
+  _bulletsAmount: 3
+--- !u!50 &8240243833196238073
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3169929110324875107}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0

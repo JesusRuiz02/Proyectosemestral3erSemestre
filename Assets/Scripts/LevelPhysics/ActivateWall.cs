@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ActivateWall : MonoBehaviour
 {
-    [SerializeField] private GameObject _miniboss = default;
+    [SerializeField] private GameObject _boss = default;
     
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -23,7 +23,7 @@ public class ActivateWall : MonoBehaviour
     private IEnumerator ActivatingBoss()
     {
         yield return new WaitForSeconds(2f);
-        _miniboss.SetActive(true);
+        _boss.SetActive(true);
     }
     
 }
