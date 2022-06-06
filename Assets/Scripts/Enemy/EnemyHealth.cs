@@ -25,7 +25,7 @@ public class EnemyHealth : MonoBehaviour
         }
         if (_enemy.Health <= 0)
         {
-            _weapon.GetComponent<Weapon>().Recharge(3);
+            _weapon.GetComponent<Weapon>().Recharge(GetComponent<Enemy>().BulletsAmount);
             Destroy(gameObject, 0.001f);
         }
     }
