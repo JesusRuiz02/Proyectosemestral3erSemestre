@@ -135,7 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rigidBody2D: {fileID: -7816673979662221981}
   _speed: 600
-  _bulletdamage: 5
+  _bulletdamage: 1
 --- !u!50 &-7816673979662221981
 Rigidbody2D:
   serializedVersion: 4

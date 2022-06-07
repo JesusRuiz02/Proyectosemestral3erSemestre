@@ -17,6 +17,7 @@ public class Miniboss : MonoBehaviour
     [SerializeField] private GameObject _projectile = default;
     [SerializeField] private float _timer = 0f;
     [SerializeField] private float _maxtimer = 13f;
+    [SerializeField] private Animator _animator = default;
     
     [Header("RotateAttack")]
     [SerializeField] private Transform _firepoint = default;
@@ -42,6 +43,7 @@ public class Miniboss : MonoBehaviour
        _enemyRigidbody2D.GetComponent<Rigidbody2D>();
        _MinibossRoom = GameObject.FindGameObjectWithTag("MiniBoss");
        _MinibossRoom.GetComponent<MinibossDeath>().MinibossIsEnabled();
+       _animator = GetComponent<Animator>();
     }
     
     void Update()
@@ -60,17 +62,17 @@ public class Miniboss : MonoBehaviour
          if (_randomStatePicker == 0)
         {
            LaserAttack();
-            _maxtimer = 4.52f;
+            _maxtimer = 4.32f;
         }
         else if (_randomStatePicker == 1)
         {
             Rotate();
-            _maxtimer = 6.5f;
+            _maxtimer = 6.3f;
         }
         else if (_randomStatePicker == 2)
         { 
             AttackLeftRight();
-            _maxtimer = 5.55f;
+            _maxtimer = 5.25f;
         }
         else if (_randomStatePicker == 3)
         {
@@ -130,10 +132,12 @@ public class Miniboss : MonoBehaviour
 
     private void Rotate()
     {
+        _animator.SetTrigger("Rotation");
         transform.DORotate(new Vector3(0, 0, 0), 0.01f);
         RepeatProjectiles();
         transform.DORotate(new Vector3(0, 0, 720), 6,RotateMode.FastBeyond360);
         _timer = 0;
+        
     }
 
     private void CancelTheInvokes()
@@ -163,7 +167,7 @@ public class Miniboss : MonoBehaviour
 
     private void RepeatLaserAttack()
     {
-        InvokeRepeating("CreateLaserAttack",1.8f, 400);
+        InvokeRepeating("CreateLaserAttack",0.05f, 400);
     }
     
 }

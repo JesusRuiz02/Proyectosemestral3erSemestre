@@ -12,10 +12,12 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private SpriteRenderer _sprite;
     [SerializeField] private float _knockbackForceX = 50;
     [SerializeField] private float _knockbackForceY = 10;
+    [SerializeField] private Animator _animator = default;
     private Rigidbody2D _rigidbody2D;
 
     void Start()
     {
+        _animator = GetComponent<Animator>();
         _sprite = GetComponent<SpriteRenderer>();
         _currentHealth = _maxHealth;
         _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -46,9 +48,16 @@ public class PlayerHealth : MonoBehaviour
 
             if (_currentHealth <= 0)
             {
+                StartCoroutine(Death());
                 Destroy(gameObject);
             }
         }
+    }
+
+    IEnumerator Death()
+    {
+        _animator.SetTrigger("Death");
+        yield break;
     }
 
     IEnumerator Inmunity(int _numBlinks, float _seconds)
