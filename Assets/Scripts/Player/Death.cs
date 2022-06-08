@@ -28,7 +28,7 @@ public class Death : StateMachineBehaviour
         player.GetComponent<PlayerMovement>().enabled = false;
         _melee.SetActive(false);
         _weapon.SetActive(false);
-        Destroy(player,1f);
+        Destroy(player);
     }
     
     
