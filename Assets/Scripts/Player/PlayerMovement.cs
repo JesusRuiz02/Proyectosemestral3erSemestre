@@ -14,7 +14,11 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D _rigidbody2D = null;
     [SerializeField] private int _jumps = 2;
     [SerializeField] private int _basejumps = 2;
+    [SerializeField] private bool _isGrounded = default;
+    [SerializeField] private Transform _groundCheck = default;
     private Animator _animator;
+    [SerializeField] private float RadiusDetection = default;
+    [SerializeField] private LayerMask _whatIsGround;
     public bool Facing_right => _facingRight;
 
     private void Awake()
@@ -34,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
         {
             DoubleJump();
         }
+        GroundCheck();
     }
 
     private void FixedUpdate()
@@ -89,5 +94,17 @@ public class PlayerMovement : MonoBehaviour
     {
         _facingRight = !_facingRight;
         transform.Rotate(0f, 180f, 0f);
+    }
+
+    private void GroundCheck()
+    {
+        _isGrounded = false;
+        Collider2D[] collider2Ds = Physics2D.OverlapCircleAll(_groundCheck.position, RadiusDetection, _whatIsGround);
+        if (collider2Ds.Length > 0)
+        { 
+            _isGrounded = true;
+        }
+        _animator.SetBool("Jump",!_isGrounded);
+        _animator.SetFloat("Yvelocity",_rigidbody2D.velocity.y);
     }
 }

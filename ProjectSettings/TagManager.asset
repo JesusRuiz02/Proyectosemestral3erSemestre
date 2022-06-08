@@ -14,6 +14,7 @@ TagManager:
   - MiniBoss
   - FxTemporaire
   - DJ
+  - WeaponGun
   layers:
   - Default
   - TransparentFX

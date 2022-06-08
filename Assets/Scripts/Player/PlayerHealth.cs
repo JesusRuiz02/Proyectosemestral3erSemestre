@@ -13,7 +13,10 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private float _knockbackForceX = 50;
     [SerializeField] private float _knockbackForceY = 10;
     [SerializeField] private Animator _animator = default;
+    [SerializeField] private GameObject _uiHealth = default;
     private Rigidbody2D _rigidbody2D;
+
+    public float Health => _currentHealth;
 
     void Start()
     {
@@ -36,6 +39,7 @@ public class PlayerHealth : MonoBehaviour
         if (collider.CompareTag("Enemy") && !_isInmune || collider.CompareTag("Miniboss") && !_isInmune)
         {
             _currentHealth -= collider.GetComponent<Enemy>().DamageToGive;
+            _uiHealth.GetComponent<LifeUI>().UpdatingLife();
             StartCoroutine(Inmunity(2, _blinkingtime));
             if (collider.transform.position.x > transform.position.x)
             {
@@ -48,17 +52,11 @@ public class PlayerHealth : MonoBehaviour
 
             if (_currentHealth <= 0)
             {
-                StartCoroutine(Death());
-                Destroy(gameObject);
+                _animator.SetTrigger("Death");
             }
         }
     }
-
-    IEnumerator Death()
-    {
-        _animator.SetTrigger("Death");
-        yield break;
-    }
+    
 
     IEnumerator Inmunity(int _numBlinks, float _seconds)
     {

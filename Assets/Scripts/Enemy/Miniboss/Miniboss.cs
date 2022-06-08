@@ -15,8 +15,6 @@ public class Miniboss : MonoBehaviour
     [Header("Other")]
     [SerializeField] private Rigidbody2D _enemyRigidbody2D = default;
     [SerializeField] private GameObject _projectile = default;
-    [SerializeField] private float _timer = 0f;
-    [SerializeField] private float _maxtimer = 13f;
     [SerializeField] private Animator _animator = default;
     
     [Header("RotateAttack")]
@@ -44,17 +42,9 @@ public class Miniboss : MonoBehaviour
        _MinibossRoom = GameObject.FindGameObjectWithTag("MiniBoss");
        _MinibossRoom.GetComponent<MinibossDeath>().MinibossIsEnabled();
        _animator = GetComponent<Animator>();
+       RandomStatePicker();
     }
     
-    void Update()
-    {
-        _timer += Time.deltaTime;
-        if (_timer >= _maxtimer)
-        {
-           RandomStatePicker();
-        }
-    }
-
     private void RandomStatePicker()
     {
         CancelTheInvokes();
@@ -62,36 +52,33 @@ public class Miniboss : MonoBehaviour
          if (_randomStatePicker == 0)
         {
            LaserAttack();
-            _maxtimer = 4.32f;
         }
         else if (_randomStatePicker == 1)
         {
-            Rotate();
-            _maxtimer = 6.3f;
+            AttackLeftRight();
         }
         else if (_randomStatePicker == 2)
         { 
-            AttackLeftRight();
-            _maxtimer = 5.25f;
+           AttackToCorners();
         }
         else if (_randomStatePicker == 3)
         {
-            AttackToCorners();
-            _maxtimer = 5.05f;
+            Rotate();
         }
     }
 
     private void LaserAttack()
     {
+        var sequence = DOTween.Sequence();
         if (_targetLocation == Vector3.zero)
             _targetLocation = transform.position;
         Vector3 originalLocation = transform.position;
-        transform.DORotate(new Vector3(0, 180, 30), 0.01f);
-        transform.DOMove(_targetLocation, _moveDuration).SetEase(_moveEase);
-        transform.DORotate(new Vector3(0, 0, 0), 0.01f).SetDelay(1);
-        transform.DOMove(originalLocation, _moveDuration).SetEase(_moveEase).SetDelay(2f);
+        sequence.Append(transform.DORotate(new Vector3(0, 180, 30), 0.01f)).SetDelay(0.3f);
+        sequence.Append(transform.DOMove(_targetLocation, _moveDuration).SetEase(_moveEase));
+        sequence.Append(transform.DORotate(new Vector3(0, 0, 0), 0.01f).SetDelay(0.2f));
+        sequence.Append(transform.DOMove(originalLocation, _moveDuration).SetEase(_moveEase).SetDelay(1f));
         RepeatLaserAttack();
-        _timer = 0;
+        sequence.AppendCallback(RandomStatePicker);
     }
     
     private void AttackLeftRight()
@@ -102,7 +89,7 @@ public class Miniboss : MonoBehaviour
         }
         Vector3 originalLocation = transform.position;
         var sequence = DOTween.Sequence();
-        sequence.Append(transform.DORotate(new Vector3(0, 180, 30), 0.01f));
+        sequence.Append(transform.DORotate(new Vector3(0, 180, 30), 0.01f)).SetDelay(0.03f);
         sequence.Append(transform.DOMove(_targetLocation, 1f).SetEase(_moveEase));
         sequence.Append(transform.DORotate(new Vector3(0, 0, 0), 0.01f));
         sequence.Append(transform.DOMove(_targetsecondLocation, _moveDuration).SetEase(_moveEase).SetDelay(1f));
@@ -110,7 +97,7 @@ public class Miniboss : MonoBehaviour
         sequence.Append(transform.DOMove(_targetLocation, _moveDuration).SetEase(_moveEase));
         sequence.Append(transform.DORotate(new Vector3(0, 0, 320), 0.01f));
         sequence.Append(transform.DOMove(originalLocation, _moveDuration).SetEase(_moveEase));
-        _timer = 0;
+        sequence.AppendCallback(RandomStatePicker);
     }
 
     private void AttackToCorners()
@@ -127,17 +114,18 @@ public class Miniboss : MonoBehaviour
             sequence.Append(transform.DOMove(_pathvalue[i], 1f).SetEase(_moveEase));
         }
         sequence.Append(transform.DORotate(new Vector3(0,0,0), 0.01f));
-        _timer = 0;
+        sequence.AppendCallback(RandomStatePicker);
     }
 
     private void Rotate()
     {
+        var sequence = DOTween.Sequence();
         _animator.SetTrigger("Rotation");
-        transform.DORotate(new Vector3(0, 0, 0), 0.01f);
+        sequence.Append(transform.DORotate(new Vector3(0, 0, 0), 0.01f)).SetDelay(0.5f);
         RepeatProjectiles();
-        transform.DORotate(new Vector3(0, 0, 720), 6,RotateMode.FastBeyond360);
-        _timer = 0;
-        
+        sequence.Append(transform.DORotate(new Vector3(0, 0, 720), 6, RotateMode.FastBeyond360));
+        sequence.AppendCallback(RandomStatePicker);
+
     }
 
     private void CancelTheInvokes()
@@ -149,7 +137,7 @@ public class Miniboss : MonoBehaviour
 
     private void RepeatProjectiles()
     {
-        InvokeRepeating("CreateProjectiles",0,1f);
+        InvokeRepeating("CreateProjectiles",0.5f,1f);
     }
     
     private void CreateProjectiles()
@@ -167,7 +155,7 @@ public class Miniboss : MonoBehaviour
 
     private void RepeatLaserAttack()
     {
-        InvokeRepeating("CreateLaserAttack",0.05f, 400);
+        InvokeRepeating("CreateLaserAttack",1.7f, 400);
     }
     
 }

@@ -28,6 +28,8 @@ public class MinibossDeath : MonoBehaviour
     private void MinibossIsDisabled()
     {
         _MinibossIsActive = false;
+        _miniboss.GetComponent<Miniboss>().enabled = false;
+        _miniboss.GetComponent<MinibossAnimation>().AnimationDeath();
         _firstWall.GetComponent<ActivateWall>().DisableObject();
         _secondWall.AddComponent<ActivateWall>().DisableObject();
     }

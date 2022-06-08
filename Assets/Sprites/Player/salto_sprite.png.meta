@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: 28994ef149e1a4a42b9cf640023a920c
+guid: be425748572a01540bc45cf427b3f371
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4723107735738678597
-    second: Idle_0
+      213: 5249116862202061670
+    second: salto_sprite_0
   - first:
-      213: -7385789195546760866
-    second: Idle_1
+      213: -6285519199692424768
+    second: salto_sprite_1
+  - first:
+      213: -1098283175915729357
+    second: salto_sprite_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -52,7 +55,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 500
+  spritePixelsToUnits: 600
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -94,18 +97,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -121,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_0
+      name: salto_sprite_0
       rect:
         serializedVersion: 2
-        x: 84
-        y: 8
-        width: 256
-        height: 464
+        x: 105
+        y: 10
+        width: 320
+        height: 580
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,20 +126,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54d7a982679db8140800000000000000
-      internalID: 4723107735738678597
+      spriteID: 6632114a9fb98d840800000000000000
+      internalID: 5249116862202061670
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_1
+      name: salto_sprite_1
       rect:
         serializedVersion: 2
-        x: 460
-        y: 8
-        width: 252
-        height: 452
+        x: 600
+        y: 10
+        width: 320
+        height: 525
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,8 +147,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e596485bbd7608990800000000000000
-      internalID: -7385789195546760866
+      spriteID: 0c97f69079955c8a0800000000000000
+      internalID: -6285519199692424768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: salto_sprite_2
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 75
+        width: 350
+        height: 580
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33e41cc354d12c0f0800000000000000
+      internalID: -1098283175915729357
       vertices: []
       indices: 
       edges: []

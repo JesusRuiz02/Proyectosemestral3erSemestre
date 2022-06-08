@@ -22,6 +22,7 @@ public class BossBullet : MonoBehaviour
         }
         if (collider.CompareTag("Floor"))
         {
+            Debug.Log("se destruyo");
             Destroy(gameObject);
         }
     }

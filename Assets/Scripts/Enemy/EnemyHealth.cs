@@ -9,7 +9,6 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private float _knockBackForceX = 300;
     [SerializeField] private float _knockBackForceY = 200;
     [SerializeField] private GameObject _particle = default;
-    [SerializeField] [CanBeNull] private GameObject _weapon = default;
 
     private void Start()
     {
@@ -25,8 +24,7 @@ public class EnemyHealth : MonoBehaviour
         }
         if (_enemy.Health <= 0)
         {
-            _weapon.GetComponent<Weapon>().Recharge(GetComponent<Enemy>().BulletsAmount);
-            Destroy(gameObject, 0.001f);
+            destroyAsset(_enemy.TimeToDestroy);
         }
     }
     
@@ -43,8 +41,12 @@ public class EnemyHealth : MonoBehaviour
 
         if (_enemy.Health <= 0)
         {
-            _weapon.GetComponent<Weapon>().Recharge(_enemy.BulletsAmount);
-            Destroy(gameObject, 0.001f);
+            destroyAsset(_enemy.TimeToDestroy);
         }
+    }
+
+    private void destroyAsset(float timeToDestroy)
+    {
+        Destroy(gameObject,timeToDestroy);
     }
 }
